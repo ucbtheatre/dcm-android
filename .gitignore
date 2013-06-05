@@ -9,6 +9,8 @@
 *.class
 
 # generated files
+DCM/build/
+out/
 bin/
 gen/
 
