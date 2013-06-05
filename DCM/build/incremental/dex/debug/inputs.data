@@ -1,0 +1,15 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1370404209000 372 ee2a358013c4146a1c00b5d631514efcd2b19088 /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/R$id.class
+1370404209000 451 94cad00206299cc322c1c86838d7f4151f4f1211 /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/R$string.class
+1370404209000 440 78660650eea6280ee61c88bb316e44cd38d055d3 /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/R$dimen.class
+1370404209000 319 b255778e0d9ed9d16ed383e00e2845253c32ae6c /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/R$attr.class
+1370404209000 607 570f43ab4b2a9aaeb13a78cafd6ce1b2cac95cc3 /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/R.class
+1370404209000 803 6adf52a08f95c3180961590634f763daa6405ad4 /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/MainActivity.class
+1370404177000 484258 bd6479f5dd592790607e0504e66e0f31c2b4d308 /Users/kurtguenther/Code/ucb/dcm-android/DCM/libs/android-support-v4.jar
+1370404209000 386 1ef70576cd2155681cd16ffa3b944109f8dafb11 /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/R$drawable.class
+1370404209000 382 481211b04ab9b18edd02f28a1a36fbf0842f8555 /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/R$layout.class
+1370404209000 410 d2f5df6fd3434f4ee302d98d60b8b8e781a345e5 /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/R$style.class
+1370404209000 331 6ba85ea8203b9caf3aa468ec77bdc7e7c1f0b96b /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/BuildConfig.class
+1370404209000 367 2bbe09a32a0875e06ec8b8484763cde98044db30 /Users/kurtguenther/Code/ucb/dcm-android/DCM/build/classes/debug/com/ucb/dcm/R$menu.class
