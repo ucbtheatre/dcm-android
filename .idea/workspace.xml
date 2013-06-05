@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="" />
+        <option name="name" value="Unnamed-0" />
+        <option name="packageNamePattern" value="com.ucb.dcm" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
+  <component name="AndroidLayoutPreviewToolWindow">
+    <option name="state">
+      <GlobalState />
+    </option>
+  </component>
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Unnamed-0" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="938bcaae-2862-434b-9167-eb4b44f5dd73" name="Default" comment="" />
     <ignored path="DCM.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/settings.gradle" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370404294005" ignored="false" />
     <file path="/build.gradle" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370404310090" ignored="false" />
-    <file path="/MainActivity.java" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370404351079" ignored="false" />
-    <file path="/fragment.java" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370404744863" ignored="false" />
+    <file path="/MainActivity.java" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370406942657" ignored="false" />
+    <file path="/fragment.java" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370405817838" ignored="false" />
     <file path="$PROJECT_DIR$/actionbarsherlock/gen/com/actionbarsherlock/Manifest.java" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370405316493" ignored="false" />
     <file path="$PROJECT_DIR$/actionbarsherlock/gen/com/actionbarsherlock/R.java" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370405317018" ignored="false" />
+    <file path="$PROJECT_DIR$/../../ActionBarSherlock/actionbarsherlock-samples/pom.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370405957213" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/source/r/debug/com/ucb/dcm/R.java" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370406968950" ignored="false" />
+    <file path="/Dummy.txt" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370406410178" ignored="false" />
+    <file path="/NowActivity.java" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407332799" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/layout-xlarge/abs__screen_action_bar_overlay.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/values-large-mdpi-1024x600/values.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/values-w480dp/values.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/drawable/abs__textfield_searchview_right_holo_light.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/values-large-land-mdpi-1024x600/values.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/drawable/abs__progress_horizontal_holo_dark.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/layout/abs__action_mode_bar.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/drawable/abs__ic_clear_holo_light.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/layout-v14/sherlock_spinner_dropdown_item.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/menu/main.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/drawable/abs__btn_cab_done_holo_dark.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/color/abs__primary_text_holo_dark.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/layout/abs__activity_chooser_view.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
+    <file path="$PROJECT_DIR$/DCM/build/res/all/debug/layout-large/abs__action_mode_close_item.xml" changelist="938bcaae-2862-434b-9167-eb4b44f5dd73" time="1370407218151" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,29 +112,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <file leaf-file-name="NowActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/NowActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DCM/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="39" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/actionbarsherlock/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="9" column="3" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,9 +126,23 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="627" selection-end="627" vertical-scroll-proportion="0.26649746">
+            <state line="31" column="80" selection-start="1279" selection-end="1279" vertical-scroll-proportion="0.59386975">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCM/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="-5.5555553">
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -119,6 +159,9 @@
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/DCM/build.gradle" />
         <option value="$PROJECT_DIR$/actionbarsherlock/build.gradle" />
+        <option value="$PROJECT_DIR$/DCM/build/res/all/debug/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/DCM/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/NowActivity.java" />
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java" />
       </list>
     </option>
@@ -305,7 +348,7 @@
     <property name="options.lastSelected" value="project.propCompiler" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/actionbarsherlock" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ActionBarSherlock/actionbarsherlock-samples" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="HT11MS005449" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -449,18 +492,21 @@
       <updated>1370404178104</updated>
       <workItem from="1370404200594" duration="838000" />
       <workItem from="1370405070353" duration="243000" />
-      <workItem from="1370405342372" duration="6000" />
+      <workItem from="1370405342372" duration="2050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1087000" />
+    <option name="totallyTimeSpent" value="3131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="22" width="2540" height="1330" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20769848" sideWeight="0.6702479" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32999197" sideWeight="0.6702479" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919005" sideWeight="0.6702479" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -468,13 +514,13 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975206" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975206" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979952" sideWeight="0.6702479" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979952" sideWeight="0.6702479" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32975206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -544,31 +590,12 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="39" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actionbarsherlock/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -596,6 +623,67 @@
     <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="33" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actionbarsherlock/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/widget/TabHost.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="42" selection-start="498" selection-end="498" vertical-scroll-proportion="0.19157088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actionbarsherlock/src/android/support/v4/app/Watson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="606" selection-end="606" vertical-scroll-proportion="0.09578544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actionbarsherlock/src/com/actionbarsherlock/app/SherlockFragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="13" selection-start="795" selection-end="795" vertical-scroll-proportion="0.09578544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/build/res/all/debug/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.21072797">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/R.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="635" column="32" selection-start="44035" selection-end="44035" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="-5.5555553">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="39" selection-start="303" selection-end="303" vertical-scroll-proportion="0.15228426">
           <folding />
         </state>
       </provider>
@@ -607,24 +695,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/build.gradle">
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/NowActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="39" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actionbarsherlock/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="9" column="3" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="627" selection-end="627" vertical-scroll-proportion="0.26649746">
-          <folding />
+        <state line="31" column="80" selection-start="1279" selection-end="1279" vertical-scroll-proportion="0.59386975">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

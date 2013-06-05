@@ -2,10 +2,10 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/actionbarsherlock/src/main/assets" />
+        <source path="/Users/kurtguenther/Code/ucb/dcm-android/actionbarsherlock/src/main/assets" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/actionbarsherlock/src/debug/assets" />
+        <source path="/Users/kurtguenther/Code/ucb/dcm-android/actionbarsherlock/src/debug/assets" />
     </dataSet>
 
 </merger>

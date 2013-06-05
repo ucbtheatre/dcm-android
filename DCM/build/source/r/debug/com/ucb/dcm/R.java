@@ -872,6 +872,7 @@ containing a value of this type.
         public static final int homeAsUp=0x7f060005;
         public static final int listMode=0x7f060001;
         public static final int normal=0x7f060000;
+        public static final int realtabcontent=0x01010000;
         public static final int showCustom=0x7f060007;
         public static final int showHome=0x7f060004;
         public static final int showTitle=0x7f060006;
