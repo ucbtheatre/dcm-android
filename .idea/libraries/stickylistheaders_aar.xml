@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="stickylistheaders.aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/DCM/build/exploded-bundles/stickylistheaders.aar/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

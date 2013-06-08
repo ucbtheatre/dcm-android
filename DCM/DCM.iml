@@ -72,6 +72,8 @@
     <orderEntry type="library" name="actionbarsherlock.aar" level="project" />
     <orderEntry type="module" module-name="AndroidData" />
     <orderEntry type="library" name="AndroidData.aar" level="project" />
+    <orderEntry type="module" module-name="stickylistheaders" />
+    <orderEntry type="library" name="stickylistheaders.aar" level="project" />
   </component>
 </module>
 

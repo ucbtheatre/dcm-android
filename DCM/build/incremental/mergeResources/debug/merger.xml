@@ -1586,6 +1586,18 @@
             <file
                 path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/actionbarsherlock.aar/res/values/values.xml"
                 qualifiers="" >
+
+                <style
+                    name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle.Inverse"
+                    parent="Widget" >
+                    <item name="android:textSize">
+@dimen/abs__action_bar_subtitle_text_size
+                    </item>
+                    <item name="android:textColor">
+?android:attr/textColorPrimaryInverse
+                    </item>
+                </style>
+
                 <declare-styleable name="SherlockSearchView" >
 
                     <!--
@@ -1606,21 +1618,6 @@
                     <!-- The input type to set on the query text field. -->
                     <attr name="android:inputType" />
                 </declare-styleable>
-
-                <style
-                    name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle.Inverse"
-                    parent="Widget" >
-                    <item name="android:textSize">
-@dimen/abs__action_bar_subtitle_text_size
-                    </item>
-                    <item name="android:textColor">
-?android:attr/textColorPrimaryInverse
-                    </item>
-                </style>
-
-                <bool name="abs__action_bar_embed_tabs" >
-false
-                </bool>
 
                 <style
                     name="Sherlock.__Widget.ActionBar"
@@ -1647,6 +1644,10 @@ useLogo|showHome|showTitle
 @layout/abs__action_bar_home
                     </item>
                 </style>
+
+                <bool name="abs__action_bar_embed_tabs" >
+false
+                </bool>
 
                 <style name="Widget.Sherlock.Light.ActionButton.Overflow" >
                     <item name="android:src">
@@ -1808,30 +1809,6 @@ bold
                     parent="@android:style/TextAppearance" />
 
                 <style
-                    name="Widget.Sherlock.Light.ListPopupWindow"
-                    parent="Widget" >
-                    <item name="android:dropDownSelector">
-@drawable/abs__list_selector_holo_light
-                    </item>
-                    <item name="android:popupBackground">
-@drawable/abs__menu_dropdown_panel_holo_light
-                    </item>
-                    <item name="android:dropDownVerticalOffset">
-0dip
-                    </item>
-                    <item name="android:dropDownHorizontalOffset">
-0dip
-                    </item>
-                    <item name="android:dropDownWidth">
-wrap_content
-                    </item>
-                </style>
-
-                <style
-                    name="Widget.Sherlock.Light.ActionButton"
-                    parent="Widget.Sherlock.ActionButton" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar"
                     parent="Widget.Sherlock.ActionBar" >
                     <item name="titleTextStyle">
@@ -1861,6 +1838,40 @@ wrap_content
                 </style>
 
                 <style
+                    name="Widget.Sherlock.Light.ActionButton"
+                    parent="Widget.Sherlock.ActionButton" />
+
+                <style
+                    name="Widget.Sherlock.Light.ListPopupWindow"
+                    parent="Widget" >
+                    <item name="android:dropDownSelector">
+@drawable/abs__list_selector_holo_light
+                    </item>
+                    <item name="android:popupBackground">
+@drawable/abs__menu_dropdown_panel_holo_light
+                    </item>
+                    <item name="android:dropDownVerticalOffset">
+0dip
+                    </item>
+                    <item name="android:dropDownHorizontalOffset">
+0dip
+                    </item>
+                    <item name="android:dropDownWidth">
+wrap_content
+                    </item>
+                </style>
+
+                <style name="TextAppearance.Sherlock.Light.SearchResult.Title" >
+                    <item name="android:textSize">
+18sp
+                    </item>
+                </style>
+
+                <style
+                    name="Widget.Sherlock.Light.PopupMenu"
+                    parent="Widget.Sherlock.Light.ListPopupWindow" />
+
+                <style
                     name="Widget.Sherlock.TextView.SpinnerItem"
                     parent="Widget" >
                     <item name="android:textAppearance">
@@ -1871,16 +1882,6 @@ wrap_content
                     </item>
                     <item name="android:paddingRight">
 8dp
-                    </item>
-                </style>
-
-                <style
-                    name="Widget.Sherlock.Light.PopupMenu"
-                    parent="Widget.Sherlock.Light.ListPopupWindow" />
-
-                <style name="TextAppearance.Sherlock.Light.SearchResult.Title" >
-                    <item name="android:textSize">
-18sp
                     </item>
                 </style>
 
@@ -1896,6 +1897,10 @@ true
                 <string name="abs__shareactionprovider_share_with" >Share with
                 </string>
 
+                <declare-styleable name="SherlockView" >
+                    <attr name="android:focusable" />
+                </declare-styleable>
+
                 <style
                     name="TextAppearance.Sherlock.Widget.TextView.SpinnerItem"
                     parent="Widget" >
@@ -1910,9 +1915,9 @@ normal
                     </item>
                 </style>
 
-                <declare-styleable name="SherlockView" >
-                    <attr name="android:focusable" />
-                </declare-styleable>
+                <style
+                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Small"
+                    parent="TextAppearance.Sherlock.Widget.PopupMenu.Small" />
 
                 <style name="TextAppearance.Sherlock.Light.SearchResult.Subtitle" >
                     <item name="android:textSize">
@@ -1924,10 +1929,6 @@ normal
                 </style>
 
                 <style
-                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Small"
-                    parent="TextAppearance.Sherlock.Widget.PopupMenu.Small" />
-
-                <style
                     name="TextAppearance.Sherlock.Widget.ActionBar.Title.Inverse"
                     parent="Widget" >
                     <item name="android:textSize">
@@ -1937,6 +1938,10 @@ normal
 ?android:attr/textColorPrimaryInverse
                     </item>
                 </style>
+
+                <attr
+                    name="subtitleTextStyle"
+                    format="reference" />
 
                 <style
                     name="Theme.Sherlock.Light.DarkActionBar"
@@ -2035,10 +2040,6 @@ normal
                     </item>
                 </style>
 
-                <attr
-                    name="subtitleTextStyle"
-                    format="reference" />
-
                 <style
                     name="Widget.Sherlock.Light.ProgressBar.Horizontal"
                     parent="Widget.Sherlock.ProgressBar.Horizontal" >
@@ -2046,6 +2047,9 @@ normal
 @drawable/abs__progress_horizontal_holo_light
                     </item>
                 </style>
+
+                <string name="abs__searchview_description_query" >Search query
+                </string>
 
                 <style name="Theme.Sherlock.NoActionBar" >
                     <item name="windowActionBar">
@@ -2055,9 +2059,6 @@ false
 true
                     </item>
                 </style>
-
-                <string name="abs__searchview_description_query" >Search query
-                </string>
 
                 <style
                     name="Theme.Sherlock.Light"
@@ -3423,13 +3424,13 @@ center_vertical
                     parent="Widget" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionMode"
-                    parent="Widget.Sherlock.ActionMode" >
-                    <item name="titleTextStyle">
-@style/TextAppearance.Sherlock.Widget.ActionMode.Title
+                    name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
+                    parent="Widget" >
+                    <item name="android:textSize">
+@dimen/abs__action_bar_subtitle_text_size
                     </item>
-                    <item name="subtitleTextStyle">
-@style/TextAppearance.Sherlock.Widget.ActionMode.Subtitle
+                    <item name="android:textColor">
+?android:attr/textColorSecondary
                     </item>
                 </style>
 
@@ -3451,13 +3452,13 @@ center_vertical
                 </style>
 
                 <style
-                    name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
-                    parent="Widget" >
-                    <item name="android:textSize">
-@dimen/abs__action_bar_subtitle_text_size
+                    name="Widget.Sherlock.Light.ActionMode"
+                    parent="Widget.Sherlock.ActionMode" >
+                    <item name="titleTextStyle">
+@style/TextAppearance.Sherlock.Widget.ActionMode.Title
                     </item>
-                    <item name="android:textColor">
-?android:attr/textColorSecondary
+                    <item name="subtitleTextStyle">
+@style/TextAppearance.Sherlock.Widget.ActionMode.Subtitle
                     </item>
                 </style>
 
@@ -3466,8 +3467,6 @@ center_vertical
                     parent="Widget.Sherlock.ActionBar.TabView" />
 
                 <dimen name="abs__action_button_min_width" >56dip
-                </dimen>
-                <dimen name="abs__search_view_text_min_width" >160dip
                 </dimen>
 
                 <declare-styleable name="SherlockMenuGroup" >
@@ -3496,6 +3495,9 @@ center_vertical
                     <!-- Whether the items are enabled. -->
                     <attr name="android:enabled" />
                 </declare-styleable>
+
+                <dimen name="abs__search_view_text_min_width" >160dip
+                </dimen>
 
                 <style name="Widget.Sherlock.Light.ActionBar.TabText.Inverse" >
                     <item name="android:textColor">
@@ -3530,6 +3532,8 @@ center_vertical
 
                 <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
+                <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
+                </dimen>
 
                 <style name="Theme.Sherlock.Light.NoActionBar" >
                     <item name="windowActionBar">
@@ -3539,9 +3543,6 @@ false
 true
                     </item>
                 </style>
-
-                <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
-                </dimen>
 
                 <style
                     name="Widget.Sherlock.ActionBar.TabBar"
@@ -3554,23 +3555,6 @@ middle
                     </item>
                     <item name="android:dividerPadding">
 12dip
-                    </item>
-                </style>
-
-                <style
-                    name="Widget.Sherlock.Light.Button.Small"
-                    parent="Widget" >
-                    <item name="android:textAppearance">
-?attr/textAppearanceSmall
-                    </item>
-                    <item name="android:textColor">
-@color/abs__primary_text_holo_light
-                    </item>
-                    <item name="android:minHeight">
-48dip
-                    </item>
-                    <item name="android:minWidth">
-48dip
                     </item>
                 </style>
 
@@ -3594,6 +3578,23 @@ middle
                 </declare-styleable>
 
                 <style
+                    name="Widget.Sherlock.Light.Button.Small"
+                    parent="Widget" >
+                    <item name="android:textAppearance">
+?attr/textAppearanceSmall
+                    </item>
+                    <item name="android:textColor">
+@color/abs__primary_text_holo_light
+                    </item>
+                    <item name="android:minHeight">
+48dip
+                    </item>
+                    <item name="android:minWidth">
+48dip
+                    </item>
+                </style>
+
+                <style
                     name="TextAppearance.Sherlock.Widget.DropDownItem"
                     parent="Widget" >
                     <item name="android:textColor">
@@ -3606,10 +3607,6 @@ middle
 normal
                     </item>
                 </style>
-
-                <style
-                    name="TextAppearance.Sherlock.Light.SearchResult"
-                    parent="TextAppearance.Sherlock.SearchResult" />
 
                 <style name="TextAppearance.Sherlock.SearchResult" >
                     <item name="android:textStyle">
@@ -3624,8 +3621,8 @@ normal
                 </style>
 
                 <style
-                    name="Widget.Sherlock.Light.DropDownItem.Spinner"
-                    parent="Sherlock.__Widget.Holo.DropDownItem" />
+                    name="TextAppearance.Sherlock.Light.SearchResult"
+                    parent="TextAppearance.Sherlock.SearchResult" />
 
                 <style name="TextAppearance.Sherlock.SearchResult.Subtitle" >
                     <item name="android:textSize">
@@ -3637,6 +3634,14 @@ normal
                 </style>
 
                 <style
+                    name="Widget.Sherlock.Light.DropDownItem.Spinner"
+                    parent="Sherlock.__Widget.Holo.DropDownItem" />
+
+                <integer name="abs__max_action_buttons" >
+2
+                </integer>
+
+                <style
                     name="Widget.Sherlock.Light.ActionMode.Inverse"
                     parent="Sherlock.__Widget.ActionMode" >
                     <item name="titleTextStyle">
@@ -3646,10 +3651,6 @@ normal
 @style/TextAppearance.Sherlock.Widget.ActionMode.Subtitle.Inverse
                     </item>
                 </style>
-
-                <integer name="abs__max_action_buttons" >
-2
-                </integer>
 
                 <style
                     name="Sherlock.__Widget.ActivityChooserView"
@@ -3710,13 +3711,13 @@ wrap_content
                     </item>
                 </style>
 
-                <item
-                    name="abs__progress_circular"
-                    type="id"/>
-
                 <attr
                     name="background"
                     format="reference|color" />
+
+                <item
+                    name="abs__progress_circular"
+                    type="id"/>
 
                 <dimen name="abs__dropdownitem_icon_width" >32dip
                 </dimen>
@@ -3724,10 +3725,6 @@ wrap_content
                 <style
                     name="TextAppearance.Sherlock.Light.Small"
                     parent="TextAppearance.Sherlock.Small" />
-
-                <style
-                    name="Widget.Sherlock.ActivityChooserView"
-                    parent="Sherlock.__Widget.ActivityChooserView" />
 
                 <declare-styleable name="SherlockMenuView" >
 
@@ -3764,6 +3761,10 @@ wrap_content
                         name="preserveIconSpacing"
                         format="boolean" />
                 </declare-styleable>
+
+                <style
+                    name="Widget.Sherlock.ActivityChooserView"
+                    parent="Sherlock.__Widget.ActivityChooserView" />
 
                 <color name="abs__bright_foreground_holo_light" >@color/abs__background_holo_dark
                 </color>
@@ -3806,16 +3807,26 @@ wrap_content
                 </string>
 
                 <style
-                    name="Widget.Sherlock.PopupMenu"
-                    parent="Widget.Sherlock.ListPopupWindow" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar.TabBar"
                     parent="Widget.Sherlock.ActionBar.TabBar" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionBar.TabText"
-                    parent="Widget.Sherlock.ActionBar.TabText" />
+                    name="Widget.Sherlock.PopupMenu"
+                    parent="Widget.Sherlock.ListPopupWindow" />
+
+                <style
+                    name="TextAppearance.Sherlock.Widget.ActionMode.Title"
+                    parent="Widget" >
+                    <item name="android:textSize">
+@dimen/abs__action_bar_title_text_size
+                    </item>
+                    <item name="android:textColor">
+?android:attr/textColorPrimary
+                    </item>
+                </style>
+
+                <color name="abs__background_holo_light" >#fff3f3f3
+                </color>
 
                 <style
                     name="Widget.Sherlock.ActionBar.TabView"
@@ -3834,19 +3845,9 @@ center_horizontal
                     </item>
                 </style>
 
-                <color name="abs__background_holo_light" >#fff3f3f3
-                </color>
-
                 <style
-                    name="TextAppearance.Sherlock.Widget.ActionMode.Title"
-                    parent="Widget" >
-                    <item name="android:textSize">
-@dimen/abs__action_bar_title_text_size
-                    </item>
-                    <item name="android:textColor">
-?android:attr/textColorPrimary
-                    </item>
-                </style>
+                    name="Widget.Sherlock.Light.ActionBar.TabText"
+                    parent="Widget.Sherlock.ActionBar.TabText" />
 
                 <bool name="abs__config_showMenuShortcutsWhenKeyboardPresent" >
 false
@@ -3864,12 +3865,12 @@ false
                     </item>
                 </style>
 
+                <string name="abs__action_mode_done" >Done
+                </string>
+
                 <item
                     name="abs__home"
                     type="id"/>
-
-                <string name="abs__action_mode_done" >Done
-                </string>
 
                 <attr
                     name="height"
@@ -3882,9 +3883,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >12dp
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
-                </dimen>
                 <dimen name="abs__action_bar_default_height" >40dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
                 </dimen>
                 <dimen name="abs__action_bar_title_text_size" >16dp
                 </dimen>
@@ -3902,9 +3903,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >8dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
-                </dimen>
                 <dimen name="abs__action_bar_default_height" >48dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
             </file>
             <file
@@ -3916,9 +3917,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >12dp
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >4dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >12dp
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
                 </dimen>
@@ -3928,9 +3929,9 @@ false
                 qualifiers="large-land-mdpi-1024x600" >
                 <dimen name="abs__action_bar_default_height" >48dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >8dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
                 </dimen>
@@ -3942,9 +3943,9 @@ false
             <file
                 path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/actionbarsherlock.aar/res/values-large-mdpi-1024x600/values.xml"
                 qualifiers="large-mdpi-1024x600" >
-                <dimen name="abs__action_button_min_width" >64dip
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
+                </dimen>
+                <dimen name="abs__action_button_min_width" >64dip
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
                 </dimen>
@@ -3977,12 +3978,13 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_default_height" >56dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
 
                 <bool name="abs__action_bar_expanded_action_views_exclusive" >
 false
                 </bool>
+
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
+                </dimen>
             </file>
             <file
                 path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/actionbarsherlock.aar/res/values-v11/values.xml"
@@ -4089,24 +4091,24 @@ false
                     parent="android:Widget.Holo.Spinner" />
 
                 <style
-                    name="Widget.Sherlock.ActionBar.TabView"
-                    parent="android:Widget.Holo.ActionBar.TabView" />
-
-                <style
                     name="TextAppearance.Sherlock.Widget.PopupMenu"
                     parent="android:TextAppearance.Holo.Widget.PopupMenu" />
+
+                <style
+                    name="Widget.Sherlock.ActionBar.TabView"
+                    parent="android:Widget.Holo.ActionBar.TabView" />
 
                 <style
                     name="Widget.Sherlock.Light.ActionButton.Overflow"
                     parent="android:Widget.Holo.Light.ActionButton.Overflow" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionBar.TabView"
-                    parent="android:Widget.Holo.Light.ActionBar.TabView" />
-
-                <style
                     name="Widget.Sherlock.Light.ProgressBar"
                     parent="android:Widget.Holo.Light.ProgressBar" />
+
+                <style
+                    name="Widget.Sherlock.Light.ActionBar.TabView"
+                    parent="android:Widget.Holo.Light.ActionBar.TabView" />
 
                 <style
                     name="Sherlock.__Theme"
@@ -4239,32 +4241,32 @@ true
                     parent="android:Widget.Holo.ListView.DropDown" />
 
                 <style
-                    name="Widget.Sherlock.ProgressBar.Horizontal"
-                    parent="android:Widget.Holo.ProgressBar.Horizontal" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar"
                     parent="android:Widget.Holo.Light.ActionBar" />
+
+                <style
+                    name="Widget.Sherlock.ProgressBar.Horizontal"
+                    parent="android:Widget.Holo.ProgressBar.Horizontal" />
 
                 <style
                     name="Widget.Sherlock.Light.SearchAutoCompleteTextView"
                     parent="android:Widget.Holo.Light.AutoCompleteTextView" />
 
                 <style
-                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
-                    parent="android:TextAppearance.Holo.Widget.PopupMenu.Large" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar.Solid"
                     parent="android:Widget.Holo.Light.ActionBar.Solid" />
 
                 <style
-                    name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
-                    parent="android:TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
+                    parent="android:TextAppearance.Holo.Widget.PopupMenu.Large" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionMode.Title"
                     parent="android:TextAppearance.Holo.Widget.ActionMode.Title" />
+
+                <style
+                    name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
+                    parent="android:TextAppearance.Holo.Widget.ActionBar.Subtitle" />
 
                 <style
                     name="Widget.Sherlock.SearchAutoCompleteTextView"
@@ -4307,17 +4309,20 @@ true
             <file
                 path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/actionbarsherlock.aar/res/values-xlarge/values.xml"
                 qualifiers="xlarge" >
+                <dimen name="abs__action_bar_title_text_size" >18dp
+                </dimen>
+
                 <item
                     name="abs__dialog_min_width_minor"
                     type="dimen">
 72%
                 </item>
 
-                <dimen name="abs__action_bar_title_text_size" >18dp
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
                 </dimen>
                 <dimen name="abs__action_button_min_width" >64dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
 
                 <item
@@ -4326,16 +4331,17 @@ true
 45%
                 </item>
 
-                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
-                </dimen>
                 <dimen name="abs__action_bar_default_height" >56dip
-                </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
                 </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
+                </dimen>
             </file>
         </source>
+    </dataSet>
+    <dataSet config="stickylistheaders.aar" >
+        <source path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/stickylistheaders.aar/res" />
     </dataSet>
     <dataSet config="AndroidData.aar" >
         <source path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/AndroidData.aar/res" >
@@ -4397,6 +4403,21 @@ true
             <file
                 name="activity_main"
                 path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/src/main/res/layout/activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="list_show"
+                path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/src/main/res/layout/list_show.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="list_show_header"
+                path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/src/main/res/layout/list_show_header.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="tab_shows"
+                path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/src/main/res/layout/tab_shows.xml"
                 qualifiers=""
                 type="layout" />
             <file

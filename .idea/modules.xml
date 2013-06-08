@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidData/AndroidData.iml" filepath="$PROJECT_DIR$/AndroidData/AndroidData.iml" />
       <module fileurl="file://$PROJECT_DIR$/DCM/DCM.iml" filepath="$PROJECT_DIR$/DCM/DCM.iml" />
       <module fileurl="file://$PROJECT_DIR$/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/actionbarsherlock/actionbarsherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androiddata/androiddata.iml" filepath="$PROJECT_DIR$/androiddata/androiddata.iml" />
       <module fileurl="file://$PROJECT_DIR$/dcm-android.iml" filepath="$PROJECT_DIR$/dcm-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stickylistheaders/stickylistheaders.iml" filepath="$PROJECT_DIR$/stickylistheaders/stickylistheaders.iml" />
     </modules>
   </component>
 </project>

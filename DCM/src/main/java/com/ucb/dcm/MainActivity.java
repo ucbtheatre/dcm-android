@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.TabHost;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.ucb.dcm.data.DBHelper;
 import com.ucb.dcm.data.DataService;
 
 import java.util.HashMap;
@@ -21,12 +22,11 @@ public class MainActivity extends SherlockFragmentActivity {
 
         //Set up services
         DataService.Initialize(this);
+        DBHelper.Initialize(this);
 
         if(DataService.getSharedService().shouldUpdate()){
             DataService.getSharedService().updateFromServer(null);
         }
-
-
         //setTheme(SampleList.THEME); //Used for theme switching in samples
         super.onCreate(savedInstanceState);
 
@@ -36,15 +36,10 @@ public class MainActivity extends SherlockFragmentActivity {
 
         mTabManager = new TabManager(this, mTabHost, R.id.realtabcontent);
 
-        mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Now"), NowActivity.class, null);
-        mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Shows"), NowActivity.class, null);
-        mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Venues"), NowActivity.class, null);
-        mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Favs"), NowActivity.class, null);
-
-//        mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Simple"), this.getClass(), null);
-//        mTabManager.addTab(mTabHost.newTabSpec("contacts").setIndicator("Contacts"), this.getClass(), null);
-//        mTabManager.addTab(mTabHost.newTabSpec("custom").setIndicator("Custom"), this.getClass(), null);
-//        mTabManager.addTab(mTabHost.newTabSpec("throttle").setIndicator("Throttle"), this.getClass(), null);
+        mTabManager.addTab(mTabHost.newTabSpec("Now").setIndicator("Now"), NowActivity.class, null);
+        mTabManager.addTab(mTabHost.newTabSpec("Shows").setIndicator("Shows"), ShowsFragment.class, null);
+        mTabManager.addTab(mTabHost.newTabSpec("Venues").setIndicator("Venues"), VenuesFragment.class, null);
+        mTabManager.addTab(mTabHost.newTabSpec("Favs").setIndicator("Favs"), NowActivity.class, null);
 
         if (savedInstanceState != null) {
             mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));

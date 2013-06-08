@@ -5,6 +5,8 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 import com.ucb.dcm.net.ExecuteURLDownload;
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -23,7 +25,7 @@ public class DataService {
     ////////
 
     private static DataService mSharedService;
-    public static final String JSON_URL = "http://www.delclosemarathon.com/dcm15/schedule.json";
+    public static final String JSON_URL = "http://www.delclosemarathon.com/dcm15/schedules/viewjson";
 
     public static DataService getSharedService()
     {
@@ -41,8 +43,13 @@ public class DataService {
 
     //TODO need logic for when to update
     public boolean shouldUpdate(){
-        return true;
+        return getVenues().size() == 0;
     }
+
+//    public boolean refreshData(){
+//        Venue.deleteAll();
+//        Show.deleteAll();
+//    }
 
     ////////
     // Downloading the data
@@ -55,6 +62,9 @@ public class DataService {
             Log.v(TAG,"Schedule download complete.  Beginning processing.");
             Toast t = Toast.makeText(context, "Schedule downloaded", Toast.LENGTH_LONG);
             t.show();
+
+            processVenues(result);
+            processShows(result);
         }
 
         @Override
@@ -68,9 +78,39 @@ public class DataService {
         try {
             Log.v(TAG,"Requesting schedule from server: " + JSON_URL);
             HttpURLConnection jsonFile = (HttpURLConnection) new URL(JSON_URL).openConnection();
-            new ExecuteURLDownload(new UpdateServerListener()).execute(jsonFile);
+            new ExecuteURLDownload(new UpdateServerListener()).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, jsonFile);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void processVenues(JSONObject results){
+        try{
+            JSONArray shows = results.getJSONArray("Venues");
+            for(int i = 0; i < shows.length(); i++){
+                JSONObject jsonVenue = shows.getJSONObject(i).getJSONObject("Venue");
+                Venue venue = Venue.fromJson(jsonVenue);
+                venue.insert(DBHelper.getSharedService().getWritableDatabase());
+            }
+
+        }
+        catch(JSONException je){
+            je.printStackTrace();
+        }
+    }
+
+    public void processShows(JSONObject results){
+        try{
+            JSONArray shows = results.getJSONArray("Shows");
+            for(int i = 0; i < shows.length(); i++){
+                JSONObject jsonShow = shows.getJSONObject(i).getJSONObject("Show");
+                Show show = Show.fromJson(jsonShow);
+                show.insert(DBHelper.getSharedService().getWritableDatabase());
+            }
+
+        }
+        catch(JSONException je){
+            je.printStackTrace();
         }
     }
 
@@ -79,9 +119,11 @@ public class DataService {
     ////////
 
     public ArrayList<Show> getShows(String filterString){
-        //TODO use filterString
-        ArrayList<Show> retVal = new ArrayList<Show>();
+        //TODO filtering
+        return Show.getAll(DBHelper.getSharedService().getWritableDatabase(), "name");
+    }
 
-        return retVal;
+    public ArrayList<Venue> getVenues(){
+        return Venue.getAll(DBHelper.getSharedService().getWritableDatabase(), "name");
     }
 }

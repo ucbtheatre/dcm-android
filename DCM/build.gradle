@@ -10,6 +10,7 @@ apply plugin: 'android'
 
 dependencies {
     compile project(':androiddata')
+    compile project(':stickylistheaders')
     compile project(':actionbarsherlock')
 }
 

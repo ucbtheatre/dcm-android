@@ -281,9 +281,10 @@ int id abs__submit_area 0x7f06002f
 int id abs__textButton 0x7f060013
 int id abs__title 0x7f06001b
 int id abs__up 0x7f06000f
-int id action_settings 0x7f060032
+int id action_settings 0x7f060034
 int id disableHome 0x7f060008
 int id edit_query 0x7f060026
+int id header_title 0x7f060033
 int id homeAsUp 0x7f060005
 int id listMode 0x7f060001
 int id normal 0x7f060000
@@ -291,6 +292,7 @@ int id realtabcontent 0x01010000
 int id showCustom 0x7f060007
 int id showHome 0x7f060004
 int id showTitle 0x7f060006
+int id show_name 0x7f060032
 int id tabMode 0x7f060002
 int id useLogo 0x7f060003
 int id wrap_content 0x7f060009
@@ -317,9 +319,12 @@ int layout abs__search_dropdown_item_icons_2line 0x7f030012
 int layout abs__search_view 0x7f030013
 int layout abs__simple_dropdown_hint 0x7f030014
 int layout activity_main 0x7f030015
-int layout main 0x7f030016
-int layout sherlock_spinner_dropdown_item 0x7f030017
-int layout sherlock_spinner_item 0x7f030018
+int layout list_show 0x7f030016
+int layout list_show_header 0x7f030017
+int layout main 0x7f030018
+int layout sherlock_spinner_dropdown_item 0x7f030019
+int layout sherlock_spinner_item 0x7f03001a
+int layout tab_shows 0x7f03001b
 int menu main 0x7f0b0000
 int string abs__action_bar_home_description 0x7f090000
 int string abs__action_bar_up_description 0x7f090001
