@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AndroidData.aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/DCM/build/exploded-bundles/AndroidData.aar/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -4337,6 +4337,41 @@ true
             </file>
         </source>
     </dataSet>
+    <dataSet config="AndroidData.aar" >
+        <source path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/AndroidData.aar/res" >
+            <file
+                name="ic_launcher"
+                path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/AndroidData.aar/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/AndroidData.aar/res/drawable-ldpi/ic_launcher.png"
+                qualifiers="ldpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/AndroidData.aar/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/AndroidData.aar/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="main"
+                path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/AndroidData.aar/res/layout/main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/build/exploded-bundles/AndroidData.aar/res/values/values.xml"
+                qualifiers="" >
+                <string name="app_name" >ACTIVITY_ENTRY_NAME
+                </string>
+            </file>
+        </source>
+    </dataSet>
     <dataSet config="main" >
         <source path="/Users/kurtguenther/Code/ucb/dcm-android/DCM/src/main/res" >
             <file

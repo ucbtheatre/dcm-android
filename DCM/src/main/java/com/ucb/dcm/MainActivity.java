@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.TabHost;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.ucb.dcm.data.DataService;
 
 import java.util.HashMap;
 
@@ -17,6 +18,15 @@ public class MainActivity extends SherlockFragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //Set up services
+        DataService.Initialize(this);
+
+        if(DataService.getSharedService().shouldUpdate()){
+            DataService.getSharedService().updateFromServer(null);
+        }
+
+
         //setTheme(SampleList.THEME); //Used for theme switching in samples
         super.onCreate(savedInstanceState);
 
@@ -29,7 +39,7 @@ public class MainActivity extends SherlockFragmentActivity {
         mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Now"), NowActivity.class, null);
         mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Shows"), NowActivity.class, null);
         mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Venues"), NowActivity.class, null);
-        mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Favorites"), NowActivity.class, null);
+        mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Favs"), NowActivity.class, null);
 
 //        mTabManager.addTab(mTabHost.newTabSpec("simple").setIndicator("Simple"), this.getClass(), null);
 //        mTabManager.addTab(mTabHost.newTabSpec("contacts").setIndicator("Contacts"), this.getClass(), null);
