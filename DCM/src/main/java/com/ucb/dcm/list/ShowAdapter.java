@@ -1,6 +1,7 @@
 package com.ucb.dcm.list;
 
 import android.database.Cursor;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,10 @@ public class ShowAdapter extends BaseAdapter {
 
         //Cast
         items.add(new HeaderAdapter("Cast"));
+        String[] performers = TextUtils.split(mShow.performers, ",");
+        for(int i = 0; i < performers.length; i++){
+            items.add(new PerformerAdapter(performers[i]));
+        }
     }
 
     @Override
@@ -125,12 +130,28 @@ public class ShowAdapter extends BaseAdapter {
             TextView time = (TextView) retVal.findViewById(R.id.show_performance_time);
 
             Date date = new Date(((long)p.start_date) * 1000);
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("E hh:mm a");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE hh:mm a");
             String display = simpleDateFormat.format(date);
             time.setText(display);
 
             TextView venue = (TextView) retVal.findViewById(R.id.show_performance_venue);
             venue.setText(v.short_name);
+            return retVal;
+        }
+    }
+
+
+    private class PerformerAdapter implements DataAdapter{
+        String name;
+
+        public PerformerAdapter(String name){
+            this.name = name;
+        }
+
+        public View getView(int i, View view, ViewGroup parent) {
+            View retVal = mInflater.inflate(R.layout.list_show_performer, parent, false);
+            TextView nameView = (TextView) retVal.findViewById(R.id.show_performer_name);
+            nameView.setText(name);
             return retVal;
         }
     }

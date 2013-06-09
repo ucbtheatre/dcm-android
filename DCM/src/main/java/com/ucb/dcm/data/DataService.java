@@ -72,9 +72,9 @@ public class DataService {
 
             dialog.setMessage("Processing Venues.");
             processVenues(result);
-            dialog.setMessage("Processing Venues.");
+            dialog.setMessage("Processing Shows.");
             processShows(result);
-            dialog.setMessage("Processing Venues.");
+            dialog.setMessage("Processing Schedules.");
             processSchedules(result);
             dialog.hide();
         }
@@ -150,7 +150,7 @@ public class DataService {
 
     public ArrayList<Show> getShows(String filterString){
         //TODO filtering
-        return Show.getAll(DBHelper.getSharedService().getWritableDatabase(), "name");
+        return Show.getAll(DBHelper.getSharedService().getWritableDatabase(), "sort_name");
     }
 
     public ArrayList<Venue> getVenues(){

@@ -1,9 +1,11 @@
 package com.ucb.dcm.data;
 
 import android.database.Cursor;
+import android.text.TextUtils;
 import com.androiddata.DBColumn;
 import com.androiddata.DBObject;
 import com.androiddata.DBTable;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -21,10 +23,14 @@ public class Show extends DBObject implements Serializable {
     public int ID;
     @DBColumn(columnName = "name")
     public String name;
+    @DBColumn(columnName = "sort_name")
+    public String sortName;
     @DBColumn(columnName = "promo")
     public String promo;
     @DBColumn(columnName = "city")
     public String city;
+    @DBColumn(columnName = "performers")
+    public String performers;
 
     public Show(){ }
 
@@ -41,6 +47,30 @@ public class Show extends DBObject implements Serializable {
         retVal.name = json.getString("show_name");
         retVal.city = json.getString("home_city");
 
+        String sortName = retVal.name.toLowerCase();
+
+        if(sortName.startsWith("'")){
+            sortName = sortName.substring(Math.min(1, sortName.length()-1));
+        }
+
+        if(sortName.startsWith("\"")){
+            sortName = sortName.substring(Math.min(1, sortName.length()-1));
+        }
+
+        if(sortName.startsWith("the")){
+            sortName = sortName.substring(4);
+        }
+
+        retVal.sortName = sortName;
+
+        JSONArray perfsJSON = json.getJSONArray("cast");
+        String[] perfsArray = new String[perfsJSON.length()];
+        for(int i = 0; i < perfsJSON.length(); i++){
+            perfsArray[i] = (String) perfsJSON.get(i);
+            perfsArray[i] = perfsArray[i].replace(",","");
+        }
+
+        retVal.performers = TextUtils.join(",", perfsArray);
         return retVal;
     }
 

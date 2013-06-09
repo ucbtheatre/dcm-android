@@ -81,7 +81,7 @@ public class ShowsListAdapter extends BaseAdapter implements StickyListHeadersAd
     @Override
     public long getHeaderId(int position) {
         //return the first character of the country as ID because this is what headers are based upon
-        return mShows.get(position).name.subSequence(0, 1).charAt(0);
+        return mShows.get(position).sortName.subSequence(0, 1).charAt(0);
     }
 
     @Override
@@ -96,7 +96,7 @@ public class ShowsListAdapter extends BaseAdapter implements StickyListHeadersAd
             holder = (HeaderViewHolder) convertView.getTag();
         }
         //set header text as first char in name
-        String headerText = "" + mShows.get(position).name.subSequence(0, 1).charAt(0);
+        String headerText = "" + mShows.get(position).sortName.subSequence(0, 1).charAt(0);
         holder.text.setText(headerText);
         return convertView;
     }
