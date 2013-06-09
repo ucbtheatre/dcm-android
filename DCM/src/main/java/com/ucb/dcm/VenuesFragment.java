@@ -1,9 +1,11 @@
 package com.ucb.dcm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.ucb.dcm.data.DataService;
@@ -25,6 +27,7 @@ public class VenuesFragment extends SherlockListFragment {
         ArrayList<Venue> venues = DataService.getSharedService().getVenues();
         mAdpt = new ArrayAdapter<Venue>(getActivity(),R.layout.list_venue,R.id.venue_name, venues);
         setListAdapter(mAdpt);
+
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 

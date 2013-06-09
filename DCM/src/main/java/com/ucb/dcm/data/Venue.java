@@ -21,6 +21,9 @@ public class Venue extends DBObject {
     @DBColumn(columnName = "name")
     public String name;
 
+    @DBColumn(columnName = "short_name")
+    public String short_name;
+
     @DBColumn(columnName = "address")
     public String address;
 
@@ -48,6 +51,7 @@ public class Venue extends DBObject {
 
         retVal.id = json.getInt("id");
         retVal.name = json.getString("name");
+        retVal.short_name = json.getString("short_name");
         retVal.address = json.getString("address");
         retVal.directions = json.getString("directions");
         retVal.image = json.getString("image");

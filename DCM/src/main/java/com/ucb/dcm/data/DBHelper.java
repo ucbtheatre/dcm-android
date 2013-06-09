@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class DBHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 4;
     private static final String DATABASE_NAME = "DCM.db";
 
     //private static final String TAG = "LocalDBHelper";
@@ -41,7 +41,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public DBObject[] getTables(){
-        return new DBObject[]{new Show(), new Venue()};
+        return new DBObject[]{new Show(), new Venue(), new Performance()};
     }
 
     // Upgrading database

@@ -1,5 +1,6 @@
 package com.ucb.dcm.data;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -57,14 +58,25 @@ public class DataService {
 
     private class UpdateServerListener implements ExecuteURLDownload.ExecuteURLDownloadListener{
 
+        ProgressDialog dialog;
+
+        public UpdateServerListener(ProgressDialog dialog){
+            this.dialog = dialog;
+        }
+
         @Override
         public void onSuccess(JSONObject result) {
             Log.v(TAG,"Schedule download complete.  Beginning processing.");
             Toast t = Toast.makeText(context, "Schedule downloaded", Toast.LENGTH_LONG);
             t.show();
 
+            dialog.setMessage("Processing Venues.");
             processVenues(result);
+            dialog.setMessage("Processing Venues.");
             processShows(result);
+            dialog.setMessage("Processing Venues.");
+            processSchedules(result);
+            dialog.hide();
         }
 
         @Override
@@ -78,7 +90,10 @@ public class DataService {
         try {
             Log.v(TAG,"Requesting schedule from server: " + JSON_URL);
             HttpURLConnection jsonFile = (HttpURLConnection) new URL(JSON_URL).openConnection();
-            new ExecuteURLDownload(new UpdateServerListener()).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, jsonFile);
+
+            ProgressDialog dialog = ProgressDialog.show(this.context, "Updating the schedule", "Fetching from the server", true);
+
+            new ExecuteURLDownload(new UpdateServerListener(dialog)).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, jsonFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -91,6 +106,21 @@ public class DataService {
                 JSONObject jsonVenue = shows.getJSONObject(i).getJSONObject("Venue");
                 Venue venue = Venue.fromJson(jsonVenue);
                 venue.insert(DBHelper.getSharedService().getWritableDatabase());
+            }
+
+        }
+        catch(JSONException je){
+            je.printStackTrace();
+        }
+    }
+
+    public void processSchedules(JSONObject results){
+        try{
+            JSONArray shows = results.getJSONArray("Schedules");
+            for(int i = 0; i < shows.length(); i++){
+                JSONObject jsonPerf = shows.getJSONObject(i).getJSONObject("Schedule");
+                Performance perf = Performance.fromJson(jsonPerf);
+                perf.insert(DBHelper.getSharedService().getWritableDatabase());
             }
 
         }

@@ -7,6 +7,7 @@ import com.androiddata.DBTable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -14,7 +15,7 @@ import java.util.ArrayList;
  */
 
 @DBTable(tableName = "Show")
-public class Show extends DBObject {
+public class Show extends DBObject implements Serializable {
 
     @DBColumn(columnName = "id", dataType = DBColumn.DataType.INTEGER)
     public int ID;
@@ -56,4 +57,7 @@ public class Show extends DBObject {
         return retVal;
     }
 
+    public Cursor getPerformances(){
+        return DBHelper.getSharedService().getWritableDatabase().rawQuery("SELECT * FROM Performance left join Venue v ON venue_id = v.id where show_id = ?", new String[]{Integer.toString(this.ID)});
+    }
 }

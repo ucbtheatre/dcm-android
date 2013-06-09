@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="AndroidData.aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/DCM/build/exploded-bundles/AndroidData.aar/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DCM/build/exploded-bundles/androiddata.aar/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
