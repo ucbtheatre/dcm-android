@@ -87,6 +87,18 @@ public class Show extends DBObject implements Serializable {
         return retVal;
     }
 
+    //We do this to eliminate the rogue "" empty performers and other junk.
+    public ArrayList<String> getPerformers(){
+        ArrayList<String> retVal = new ArrayList<String>();
+        String[] arr = TextUtils.split(this.performers, ",");
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i].length() > 0){
+                retVal.add(arr[i]);
+            }
+        }
+        return retVal;
+    }
+
     public Cursor getPerformances(){
         return DBHelper.getSharedService().getWritableDatabase().rawQuery("SELECT * FROM Performance left join Venue v ON venue_id = v.id where show_id = ?", new String[]{Integer.toString(this.ID)});
     }

@@ -26,6 +26,7 @@
         </activity>
         <activity android:name=".ViewShowFragment"/>
         <activity android:name=".NowActivity"/>
+        <activity android:name=".DisplayVenueActivity"/>
     </application>
 
 </manifest>

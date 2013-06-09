@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.ucb.dcm.data.DataService;
 import com.ucb.dcm.data.Show;
@@ -29,6 +30,14 @@ public class VenuesFragment extends SherlockListFragment {
         setListAdapter(mAdpt);
 
         return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        Intent displayVenue = new Intent(getActivity(), DisplayVenueActivity.class);
+        Venue venue = (Venue) getListAdapter().getItem(position);
+        displayVenue.putExtra(DisplayVenueActivity.VENUE_KEY, venue);
+        startActivity(displayVenue);
     }
 
 }

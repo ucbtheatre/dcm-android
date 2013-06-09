@@ -7,13 +7,14 @@ import com.androiddata.DBTable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by kurtguenther on 6/8/13.
  */
 @DBTable(tableName = "Venue")
-public class Venue extends DBObject {
+public class Venue extends DBObject implements Serializable {
 
     @DBColumn(columnName = "id", dataType = DBColumn.DataType.INTEGER)
     public int id;
@@ -77,5 +78,9 @@ public class Venue extends DBObject {
     @Override
     public String toString() {
         return name;
+    }
+
+    public Cursor getSchedule(){
+        return DBHelper.getSharedService().getWritableDatabase().rawQuery("SELECT * from performance p LEFT JOIN show s on p.show_id = s.id where venue_id = ? order by p.start_date", new String[]{Integer.toString(id)});
     }
 }

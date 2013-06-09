@@ -44,9 +44,9 @@ public class ShowAdapter extends BaseAdapter {
 
         //Cast
         items.add(new HeaderAdapter("Cast"));
-        String[] performers = TextUtils.split(mShow.performers, ",");
-        for(int i = 0; i < performers.length; i++){
-            items.add(new PerformerAdapter(performers[i]));
+        ArrayList<String> perfs = mShow.getPerformers();
+        for(int i = 0; i < perfs.size(); i++){
+            items.add(new PerformerAdapter(perfs.get(i)));
         }
     }
 
