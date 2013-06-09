@@ -142,7 +142,7 @@
       <file leaf-file-name="ShowAdapter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="77" selection-start="3520" selection-end="3520" vertical-scroll-proportion="0.66573817" vertical-offset="1352" max-vertical-offset="2070">
+            <state line="50" column="5" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.81476325" vertical-offset="165" max-vertical-offset="2145">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1081,7 +1081,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="77" selection-start="3520" selection-end="3520" vertical-scroll-proportion="0.66573817" vertical-offset="1352" max-vertical-offset="2070">
+        <state line="50" column="5" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.81476325" vertical-offset="165" max-vertical-offset="2145">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
