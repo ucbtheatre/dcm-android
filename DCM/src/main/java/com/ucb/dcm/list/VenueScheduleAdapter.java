@@ -79,7 +79,10 @@ public class VenueScheduleAdapter extends CursorAdapter implements StickyListHea
         }
         TextView title = (TextView) convertView.findViewById(R.id.header_title);
 
-        Date date = new Date(); // TODO make this real
+        Cursor c = (Cursor) getItem(position);
+
+        int start_date = cursor.getInt(cursor.getColumnIndex("start_date"));
+        Date date = new Date(((long)start_date) * 1000);
         SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
         String headerTitle = sdf.format(date);
 
@@ -89,7 +92,9 @@ public class VenueScheduleAdapter extends CursorAdapter implements StickyListHea
 
     @Override
     public long getHeaderId(int position) {
-        Date date = new Date(); //Todo
+        Cursor c = (Cursor) getItem(position);
+        int start_date = cursor.getInt(cursor.getColumnIndex("start_date"));
+        Date date = new Date(((long)start_date) * 1000);
         return date.getDay();
     }
 }

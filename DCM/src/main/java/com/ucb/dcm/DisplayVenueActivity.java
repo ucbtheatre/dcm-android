@@ -1,11 +1,13 @@
 package com.ucb.dcm;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.app.SherlockListActivity;
 import com.ucb.dcm.data.DataService;
@@ -41,4 +43,13 @@ public class DisplayVenueActivity extends SherlockListActivity {
         setListAdapter(mAdpt);
     }
 
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        Cursor c = (Cursor) getListAdapter().getItem(position);
+        Show show = new Show(c);
+
+        Intent displayShow = new Intent(this, ViewShowFragment.class);
+        displayShow.putExtra(ViewShowFragment.SHOW_KEY, show);
+        startActivity(displayShow);
+    }
 }
