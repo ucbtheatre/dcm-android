@@ -36,7 +36,7 @@ public class DisplayVenueActivity extends SherlockListActivity {
         //Hook up the data
         mVenue = (Venue) getIntent().getSerializableExtra(VENUE_KEY);
 
-        setTitle(mVenue.name);
+        setTitle(mVenue.name + " - Schedule");
 
         Cursor c = mVenue.getSchedule();
         VenueScheduleAdapter mAdpt = new VenueScheduleAdapter(this, c);
