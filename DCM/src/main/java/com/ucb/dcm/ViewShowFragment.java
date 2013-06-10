@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.app.SherlockListActivity;
+import com.actionbarsherlock.view.MenuItem;
 import com.ucb.dcm.data.DBHelper;
 import com.ucb.dcm.data.DataService;
 import com.ucb.dcm.data.Show;
@@ -35,8 +37,27 @@ public class ViewShowFragment extends SherlockListActivity {
 
     @Override
     public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
-        getMenuInflater().inflate(R.menu.show,  menu);
+        getSupportMenuInflater().inflate(R.menu.show, menu);
         return true;
     }
 
+    @Override
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.show_favorite:
+                if(!item.isChecked()){
+                    Toast.makeText(this, "Favorite Added.", Toast.LENGTH_SHORT).show();
+                    mShow.addFavorite();
+                }
+                else{
+                    mShow.removeFavorite();
+                    Toast.makeText(this, "Favorite Removed.", Toast.LENGTH_SHORT).show();
+                }
+                item.setChecked(!item.isChecked());
+
+                break;
+
+        }
+        return super.onMenuItemSelected(featureId, item);
+    }
 }

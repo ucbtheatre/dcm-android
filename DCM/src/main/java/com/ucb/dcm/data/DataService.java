@@ -1,7 +1,10 @@
 package com.ucb.dcm.data;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
@@ -11,7 +14,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -71,12 +76,50 @@ public class DataService {
             t.show();
 
             dialog.setMessage("Processing Venues.");
-            processVenues(result);
-            dialog.setMessage("Processing Shows.");
-            processShows(result);
-            dialog.setMessage("Processing Schedules.");
-            processSchedules(result);
-            dialog.hide();
+            AsyncTask<JSONObject, Integer, String> dbUpdate = new AsyncTask<JSONObject, Integer, String>() {
+                @Override
+                protected String doInBackground(JSONObject... params) {
+                    JSONObject js = params[0];
+
+                    Activity aaa = (Activity) context;
+
+                    aaa.runOnUiThread(new Runnable() {
+                        public void run() {
+                            dialog.setMessage("Processing Venues.");
+                        }
+                    });
+
+                    //dialog.setMessage("Processing Venues.");
+                    processVenues(js);
+
+                    aaa.runOnUiThread(new Runnable() {
+                        public void run() {
+                            dialog.setMessage("Processing Shows.");
+                        }
+                    });
+
+                    //dialog.setMessage("Processing Shows.");
+                    processShows(js);
+                    aaa.runOnUiThread(new Runnable() {
+                        public void run() {
+                            dialog.setMessage("Processing Schedules.");
+                        }
+                    });
+                    //dialog.setMessage("Processing Schedules.");
+                    processSchedules(js);
+                    aaa.runOnUiThread(new Runnable() {
+                        public void run() {
+                            dialog.hide();
+                        }
+                    });
+
+                    return null;
+                }
+
+            };
+
+            dbUpdate.execute(result);
+
         }
 
         @Override

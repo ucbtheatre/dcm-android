@@ -32,6 +32,9 @@ public class Show extends DBObject implements Serializable {
     @DBColumn(columnName = "performers")
     public String performers;
 
+    @DBColumn(columnName = "favorite", dataType = DBColumn.DataType.BOOL)
+    public boolean isFavorite;
+
     public Show(){ }
 
     public Show(Cursor c){
@@ -46,6 +49,7 @@ public class Show extends DBObject implements Serializable {
         retVal.promo = json.getString("promo_blurb");
         retVal.name = json.getString("show_name");
         retVal.city = json.getString("home_city");
+        retVal.isFavorite = false;
 
         String sortName = retVal.name.toLowerCase();
 
@@ -101,5 +105,15 @@ public class Show extends DBObject implements Serializable {
 
     public Cursor getPerformances(){
         return DBHelper.getSharedService().getWritableDatabase().rawQuery("SELECT * FROM Performance left join Venue v ON venue_id = v.id where show_id = ?", new String[]{Integer.toString(this.ID)});
+    }
+
+    public void addFavorite(){
+        //TODO
+        ;
+    }
+
+    public void removeFavorite(){
+        //TODO
+        ;
     }
 }
