@@ -119,10 +119,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowsListAdapter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ShowsListAdapter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowsListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="38" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="2055">
+            <state line="32" column="35" selection-start="1011" selection-end="1011" vertical-scroll-proportion="0.41353384" vertical-offset="0" max-vertical-offset="2070">
               <folding />
             </state>
           </provider>
@@ -140,22 +140,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NowActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/NowActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="53" selection-start="777" selection-end="789" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_show.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="list_show.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DCM/src/main/res/layout/list_show.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="25" selection-start="254" selection-end="254" vertical-scroll-proportion="0.11673152" vertical-offset="0" max-vertical-offset="771">
+            <state line="9" column="21" selection-start="293" selection-end="293" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DisplayVenueActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/DisplayVenueActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="29" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
@@ -276,7 +276,6 @@
         <option value="$PROJECT_DIR$/DCM/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/menu/main.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowsListAdapter.java" />
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java" />
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/DisplayVenueActivity.java" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/layout/list_venue.xml" />
@@ -287,6 +286,7 @@
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ShowsFragment.java" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/layout/tab_shows.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/layout/list_show.xml" />
+        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowsListAdapter.java" />
       </list>
     </option>
   </component>
@@ -878,7 +878,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20769848" sideWeight="0.6702479" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32999197" sideWeight="0.6702479" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22275259" sideWeight="0.6826446" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22275259" sideWeight="0.6826446" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38347107" sideWeight="0.858794" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.3155779" order="7" side_tool="true" content_ui="tabs" />
@@ -963,13 +963,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/DisplayVenueActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="29" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DCM/src/main/res/layout/list_venue.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1052,13 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowsListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="38" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="2055">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/VenuesFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="23" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
@@ -1098,7 +1084,21 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="254" selection-end="254" vertical-scroll-proportion="0.11673152" vertical-offset="0" max-vertical-offset="771">
+        <state line="9" column="21" selection-start="293" selection-end="293" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/DisplayVenueActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="29" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowsListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="35" selection-start="1011" selection-end="1011" vertical-scroll-proportion="0.41353384" vertical-offset="0" max-vertical-offset="2070">
           <folding />
         </state>
       </provider>

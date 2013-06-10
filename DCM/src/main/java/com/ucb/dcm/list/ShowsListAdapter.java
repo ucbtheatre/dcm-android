@@ -31,7 +31,8 @@ public class ShowsListAdapter extends BaseAdapter implements StickyListHeadersAd
         mFilteredShows.clear();
         for(int i = 0; i < mShows.size(); i++){
             Show f = mShows.get(i);
-            if(f.name.toLowerCase().contains(filter)){
+            if(f.name.toLowerCase().contains(filter) ||
+                    f.performers.toLowerCase().contains(filter)){
                 mFilteredShows.add(f);
             }
         }
