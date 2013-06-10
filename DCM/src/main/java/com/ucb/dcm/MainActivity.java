@@ -7,15 +7,22 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.TabHost;
+import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.widget.SearchView;
 import com.ucb.dcm.data.DBHelper;
 import com.ucb.dcm.data.DataService;
 
 import java.util.HashMap;
 
-public class MainActivity extends SherlockFragmentActivity {
+public class MainActivity extends SherlockFragmentActivity implements SearchView.OnQueryTextListener{
     TabHost mTabHost;
     TabManager mTabManager;
+
+    private static final String SHOWS_TAB = "Shows";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +44,7 @@ public class MainActivity extends SherlockFragmentActivity {
         mTabManager = new TabManager(this, mTabHost, R.id.realtabcontent);
 
         mTabManager.addTab(mTabHost.newTabSpec("Now").setIndicator("Now"), NowActivity.class, null);
-        mTabManager.addTab(mTabHost.newTabSpec("Shows").setIndicator("Shows"), ShowsFragment.class, null);
+        mTabManager.addTab(mTabHost.newTabSpec(SHOWS_TAB).setIndicator("Shows"), ShowsFragment.class, null);
         mTabManager.addTab(mTabHost.newTabSpec("Venues").setIndicator("Venues"), VenuesFragment.class, null);
         mTabManager.addTab(mTabHost.newTabSpec("Favs").setIndicator("Favs"), NowActivity.class, null);
 
@@ -51,6 +58,8 @@ public class MainActivity extends SherlockFragmentActivity {
         super.onSaveInstanceState(outState);
         outState.putString("tab", mTabHost.getCurrentTabTag());
     }
+
+
 
     /**`
      * This is a helper class that implements a generic mechanism for
@@ -150,6 +159,58 @@ public class MainActivity extends SherlockFragmentActivity {
                 ft.commit();
                 mActivity.getSupportFragmentManager().executePendingTransactions();
             }
+
+            //Do this so we can show the search button or not.
+            mActivity.invalidateOptionsMenu();
         }
     }
+
+//    @Override
+//    public boolean onPrepareOptionsMenu(Menu menu) {
+//        menu.clear();
+//        getSupportMenuInflater().inflate(R.menu.main, menu);
+//        if(mTabHost.getCurrentTabTag().equals(SHOWS_TAB)){
+//            menu.findItem(R.id.menu_search).setVisible(true);
+//            menu.findItem(R.id.menu_search).setActionView(new SearchView(this));
+//        }
+//
+//        return true;
+//    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getSupportMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.menu_search:
+                SearchView sv = (SearchView) item.getActionView();
+                sv.setOnQueryTextListener(MainActivity.this);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        if(mTabHost.getCurrentTabTag().equals(SHOWS_TAB)){
+            ShowsFragment frag = (ShowsFragment) mTabManager.mLastTab.fragment;
+            frag.setFilter(s);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        if(mTabHost.getCurrentTabTag().equals(SHOWS_TAB)){
+            ShowsFragment frag = (ShowsFragment) mTabManager.mLastTab.fragment;
+            frag.setFilter(s);
+        }
+        return true;
+    }
+
 }

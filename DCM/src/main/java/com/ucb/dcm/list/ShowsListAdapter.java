@@ -16,13 +16,36 @@ import java.util.ArrayList;
 public class ShowsListAdapter extends BaseAdapter implements StickyListHeadersAdapter {
 
     private ArrayList<Show> mShows;
+    private ArrayList<Show> mFilteredShows;
+    private String filter;
     private LayoutInflater inflater;
 
     public ShowsListAdapter(ArrayList<Show> shows, LayoutInflater inflater){
         this.mShows = shows;
         this.inflater = inflater;
+        mFilteredShows = new ArrayList<Show>();
     }
 
+    public void updateFilter(String newFilter){
+        filter = newFilter;
+        mFilteredShows.clear();
+        for(int i = 0; i < mShows.size(); i++){
+            Show f = mShows.get(i);
+            if(f.name.toLowerCase().contains(filter)){
+                mFilteredShows.add(f);
+            }
+        }
+        notifyDataSetInvalidated();
+    }
+
+    public ArrayList<Show> getShows(){
+        if(filter == null || filter.equals("")){
+            return mShows;
+        }
+        else{
+            return mFilteredShows;
+        }
+    }
 
     @Override
     public boolean areAllItemsEnabled() {
@@ -36,12 +59,12 @@ public class ShowsListAdapter extends BaseAdapter implements StickyListHeadersAd
 
     @Override
     public int getCount() {
-        return mShows.size();
+        return getShows().size();
     }
 
     @Override
     public Object getItem(int position) {
-        return mShows.get(position);
+        return getShows().get(position);
     }
 
     @Override
@@ -67,7 +90,7 @@ public class ShowsListAdapter extends BaseAdapter implements StickyListHeadersAd
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.text.setText(mShows.get(position).name);
+        holder.text.setText(getShows().get(position).name);
 
         return convertView;
     }
@@ -81,7 +104,7 @@ public class ShowsListAdapter extends BaseAdapter implements StickyListHeadersAd
     @Override
     public long getHeaderId(int position) {
         //return the first character of the country as ID because this is what headers are based upon
-        return mShows.get(position).sortName.subSequence(0, 1).charAt(0);
+        return getShows().get(position).sortName.subSequence(0, 1).charAt(0);
     }
 
     @Override
@@ -96,7 +119,7 @@ public class ShowsListAdapter extends BaseAdapter implements StickyListHeadersAd
             holder = (HeaderViewHolder) convertView.getTag();
         }
         //set header text as first char in name
-        String headerText = "" + mShows.get(position).sortName.subSequence(0, 1).charAt(0);
+        String headerText = "" + getShows().get(position).sortName.subSequence(0, 1).charAt(0);
         holder.text.setText(headerText);
         return convertView;
     }
@@ -104,7 +127,7 @@ public class ShowsListAdapter extends BaseAdapter implements StickyListHeadersAd
 
     @Override
     public boolean isEmpty() {
-        return mShows.size() == 0;
+        return getShows().size() == 0;
     }
 
     class HeaderViewHolder {

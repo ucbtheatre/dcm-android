@@ -46,4 +46,8 @@ public class ShowsFragment extends SherlockListFragment {
         displayShow.putExtra(ViewShowFragment.SHOW_KEY, show);
         startActivity(displayShow);
     }
+
+    public void setFilter(String filter){
+        mAdpt.updateFilter(filter);
+    }
 }

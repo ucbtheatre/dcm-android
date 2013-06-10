@@ -3,4 +3,10 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
+    <item android:id="@+id/menu_search"
+          android:title="search"
+          android:icon="@android:drawable/ic_menu_search"
+          android:showAsAction="ifRoom|collapseActionView"
+          android:actionViewClass="com.actionbarsherlock.widget.SearchView"
+          android:visible="true"/>
 </menu>
