@@ -165,17 +165,20 @@ public class MainActivity extends SherlockFragmentActivity implements SearchView
         }
     }
 
-//    @Override
-//    public boolean onPrepareOptionsMenu(Menu menu) {
-//        menu.clear();
-//        getSupportMenuInflater().inflate(R.menu.main, menu);
-//        if(mTabHost.getCurrentTabTag().equals(SHOWS_TAB)){
-//            menu.findItem(R.id.menu_search).setVisible(true);
-//            menu.findItem(R.id.menu_search).setActionView(new SearchView(this));
-//        }
-//
-//        return true;
-//    }
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        menu.clear();
+        getSupportMenuInflater().inflate(R.menu.main, menu);
+        if(mTabHost.getCurrentTabTag().equals(SHOWS_TAB)){
+            menu.findItem(R.id.menu_search).setVisible(true);
+        }
+        else
+        {
+            menu.findItem(R.id.menu_search).setVisible(false);
+        }
+
+        return true;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
