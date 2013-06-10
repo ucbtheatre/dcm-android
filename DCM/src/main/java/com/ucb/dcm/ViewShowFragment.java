@@ -1,6 +1,7 @@
 package com.ucb.dcm;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.TabHost;
 import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockActivity;
@@ -31,4 +32,11 @@ public class ViewShowFragment extends SherlockListActivity {
         mShow = (Show) getIntent().getSerializableExtra(SHOW_KEY);
         setListAdapter(new ShowAdapter(getLayoutInflater(), mShow));
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.show,  menu);
+        return true;
+    }
+
 }
