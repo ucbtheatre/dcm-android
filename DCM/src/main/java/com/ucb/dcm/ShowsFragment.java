@@ -1,5 +1,6 @@
 package com.ucb.dcm;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +11,9 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockListFragment;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 import com.emilsjolander.components.stickylistheaders.StickyListHeadersListView;
 import com.ucb.dcm.data.DataService;
 import com.ucb.dcm.data.Show;
@@ -29,7 +33,20 @@ public class ShowsFragment extends SherlockListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ArrayList<Show> shows = DataService.getSharedService().getShows(null);
+        ArrayList<Show> shows = getData();
+        mAdpt = new ShowsListAdapter(shows, getActivity().getLayoutInflater());
+        setListAdapter(mAdpt);
+    }
+
+    protected ArrayList<Show> getData(){
+        return DataService.getSharedService().getShows(null);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        ArrayList<Show> shows = getData();
         mAdpt = new ShowsListAdapter(shows, getActivity().getLayoutInflater());
         setListAdapter(mAdpt);
     }

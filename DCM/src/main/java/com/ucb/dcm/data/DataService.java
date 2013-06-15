@@ -3,6 +3,7 @@ package com.ucb.dcm.data;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -194,6 +195,19 @@ public class DataService {
     public ArrayList<Show> getShows(String filterString){
         //TODO filtering
         return Show.getAll(DBHelper.getSharedService().getWritableDatabase(), "sort_name");
+    }
+
+    public ArrayList<Show> getFavorites(){
+        Show s = new Show();
+        ArrayList<Show> retVal = new ArrayList<Show>();
+        Cursor c = DBHelper.getSharedService().getWritableDatabase().query(s.getTableName(), s.getColumnNames(), "favorite = 1", null, null, null, "sort_name");
+
+        while(c.moveToNext())
+        {
+            retVal.add(new Show(c));
+        }
+
+        return retVal;
     }
 
     public ArrayList<Venue> getVenues(){

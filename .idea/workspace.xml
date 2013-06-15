@@ -47,7 +47,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -84,38 +84,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/androiddata/src/com/androiddata/DBObject.java" line="83" class="com.androiddata.DBObject" package="com.androiddata">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/DataService.java" line="73" class="com.ucb.dcm.data.DataService.UpdateServerListener" package="com.ucb.dcm.data">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -125,68 +94,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DCM/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="52" selection-start="748" selection-end="748" vertical-scroll-proportion="-11.666667" vertical-offset="0" max-vertical-offset="720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataService.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/DataService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="41" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.6378446" vertical-offset="751" max-vertical-offset="2850">
-              <folding>
-                <element signature="e#2094#3570#0" expanded="true" />
-                <element signature="e#2381#2558#0" expanded="true" />
-                <element signature="e#2535#2536#0" expanded="true" />
-                <element signature="e#2703#2879#0" expanded="true" />
-                <element signature="e#2856#2857#0" expanded="true" />
-                <element signature="e#3178#3179#0" expanded="true" />
-                <element signature="e#3350#3501#0" expanded="true" />
-                <element signature="e#3478#3479#0" expanded="true" />
-                <element signature="e#3554#3555#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Show.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/Show.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="14" selection-start="3403" selection-end="3403" vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="1875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DCM/src/main/res/menu/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="34" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="270">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DCM/src/main/res/menu/show.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="34" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DisplayVenueActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/DisplayVenueActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="29" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="900">
+            <state line="122" column="73" selection-start="3996" selection-end="3996" vertical-scroll-proportion="0.0" vertical-offset="761" max-vertical-offset="1815">
               <folding />
             </state>
           </provider>
@@ -195,7 +106,25 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3375">
+            <state line="48" column="94" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.0" vertical-offset="1712" max-vertical-offset="3135">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NowActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/NowActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="13" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VenuesFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/VenuesFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="0" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -204,17 +133,55 @@
       <file leaf-file-name="ViewShowFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ViewShowFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="60" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="1035">
+            <state line="41" column="0" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="975">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowsFragment.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="VenueScheduleAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/VenueScheduleAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="13" selection-start="600" selection-end="600" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="50" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowsFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ShowsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="45" selection-start="1204" selection-end="1213" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="885">
+            <state line="50" column="30" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.58270675" vertical-offset="0" max-vertical-offset="855">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowsListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowsListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="122" column="0" selection-start="3461" selection-end="3461" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="2070">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FavoritesFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/FavoritesFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="5" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -272,22 +239,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java" />
-        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/DisplayVenueActivity.java" />
-        <option value="$PROJECT_DIR$/DCM/src/main/res/layout/list_venue.xml" />
-        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/NowActivity.java" />
-        <option value="$PROJECT_DIR$/DCM/src/main/res/layout/activity_show.xml" />
-        <option value="$PROJECT_DIR$/DCM/src/main/res/layout/activity_now.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ShowsFragment.java" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/layout/tab_shows.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/layout/list_show.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/menu/main.xml" />
+        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowsListAdapter.java" />
+        <option value="$PROJECT_DIR$/androiddata/src/com/androiddata/DBColumn.java" />
+        <option value="$PROJECT_DIR$/androiddata/src/com/androiddata/DBObjectCache.java" />
+        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/Venue.java" />
+        <option value="$PROJECT_DIR$/androiddata/src/com/androiddata/DBObject.java" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/menu/show.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ViewShowFragment.java" />
-        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/Show.java" />
-        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowsListAdapter.java" />
+        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java" />
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/DataService.java" />
+        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/Show.java" />
+        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/FavoritesFragment.java" />
+        <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ShowsFragment.java" />
       </list>
     </option>
   </component>
@@ -630,10 +597,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DCM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dcm-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="androiddata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DCM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dcm-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="androiddata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="androiddata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -683,6 +686,26 @@
     </key>
   </component>
   <component name="RunManager" selected="Android Application.DCM">
+    <configuration default="false" name="androiddata" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true">
+      <module name="DCM" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
       <module name="" />
       <setting name="path" value="" />
@@ -829,9 +852,15 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Android Application.DCM" />
+      <item index="1" class="java.lang.String" itemvalue="Android Tests.androiddata" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.androiddata" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -913,14 +942,13 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20769848" sideWeight="0.6702479" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32999197" sideWeight="0.6702479" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22275259" sideWeight="0.6165289" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38347107" sideWeight="0.858794" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.3155779" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22084722" sideWeight="0.28793103" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22084722" sideWeight="0.28793103" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31735536" sideWeight="0.49698493" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23719008" sideWeight="0.49698493" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.68442214" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971668" sideWeight="0.60087335" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -933,6 +961,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22275259" sideWeight="0.6165289" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838428" sideWeight="0.49909583" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -998,140 +1027,115 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/res/layout/activity_venue.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/androiddata/src/com/androiddata/DBTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/VenuesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="23" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/res/layout/tab_shows.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="262" selection-end="262" vertical-scroll-proportion="-2.7777777" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/res/layout/list_show_header.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="15" selection-start="639" selection-end="639" vertical-scroll-proportion="-8.888889" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/res/layout/list_show.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/DisplayVenueActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="29" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="34" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="270">
+        <state line="9" column="18" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DCM/src/main/res/menu/show.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
+        <state line="5" column="52" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ShowsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="45" selection-start="1204" selection-end="1213" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/Show.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="14" selection-start="3403" selection-end="3403" vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="1875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ViewShowFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="60" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowsListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="47" selection-start="1129" selection-end="1137" vertical-scroll-proportion="0.45112783" vertical-offset="0" max-vertical-offset="2070">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/res/drawable-hdpi/ic_action_not_favorite.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="52" selection-start="748" selection-end="748" vertical-scroll-proportion="-11.666667" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/database/sqlite/SQLiteDatabase.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/os/AsyncTask.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+        <state line="123" column="35" selection-start="6374" selection-end="6374" vertical-scroll-proportion="0.0" vertical-offset="1536" max-vertical-offset="2835">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/DataService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="41" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.6378446" vertical-offset="751" max-vertical-offset="2850">
+        <state line="202" column="126" selection-start="6505" selection-end="6505" vertical-scroll-proportion="0.0" vertical-offset="1991" max-vertical-offset="2775">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/DCM/build/exploded-bundles/androiddata.aar/classes.jar!/com/androiddata/DBObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="28" selection-start="946" selection-end="946" vertical-scroll-proportion="-13.2" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/Show.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="73" selection-start="3996" selection-end="3996" vertical-scroll-proportion="0.0" vertical-offset="761" max-vertical-offset="1815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/NowActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="94" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.0" vertical-offset="1712" max-vertical-offset="3135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/VenueScheduleAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="600" selection-end="600" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowsListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="0" selection-start="3461" selection-end="3461" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="2070">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/VenuesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ViewShowFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/FavoritesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="5" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
           <folding>
-            <element signature="e#2094#3570#0" expanded="true" />
-            <element signature="e#2381#2558#0" expanded="true" />
-            <element signature="e#2535#2536#0" expanded="true" />
-            <element signature="e#2703#2879#0" expanded="true" />
-            <element signature="e#2856#2857#0" expanded="true" />
-            <element signature="e#3178#3179#0" expanded="true" />
-            <element signature="e#3350#3501#0" expanded="true" />
-            <element signature="e#3478#3479#0" expanded="true" />
-            <element signature="e#3554#3555#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="50" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ShowsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="30" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.58270675" vertical-offset="0" max-vertical-offset="855">
+          <folding />
         </state>
       </provider>
     </entry>

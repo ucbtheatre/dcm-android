@@ -46,7 +46,7 @@ public class MainActivity extends SherlockFragmentActivity implements SearchView
         mTabManager.addTab(mTabHost.newTabSpec("Now").setIndicator("Now"), NowActivity.class, null);
         mTabManager.addTab(mTabHost.newTabSpec(SHOWS_TAB).setIndicator("Shows"), ShowsFragment.class, null);
         mTabManager.addTab(mTabHost.newTabSpec("Venues").setIndicator("Venues"), VenuesFragment.class, null);
-        mTabManager.addTab(mTabHost.newTabSpec("Favs").setIndicator("Favs"), NowActivity.class, null);
+        mTabManager.addTab(mTabHost.newTabSpec("Favs").setIndicator("Favs"), FavoritesFragment.class, null);
 
         if (savedInstanceState != null) {
             mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));

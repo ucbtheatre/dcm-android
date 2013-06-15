@@ -39,6 +39,12 @@ public class Show extends DBObject implements Serializable {
 
     public Show(Cursor c){
         super(c);
+//        ID = c.getInt(c.getColumnIndex("id"));
+//        name = c.getString(c.getColumnIndex("name"));
+//        sortName = c.getString(c.getColumnIndex("sort_name"));
+//        promo = c.getString(c.getColumnIndex("promo"));
+//        city = c.getString(c.getColumnIndex("city"));
+//        performers= c.getString(c.getColumnIndex("performers"));
     }
 
 
@@ -108,12 +114,12 @@ public class Show extends DBObject implements Serializable {
     }
 
     public void addFavorite(){
-        //TODO
-        ;
+        isFavorite = true;
+        DBHelper.getSharedService().getWritableDatabase().update(getTableName(), getContentValues(), "id = ?", new String[]{Integer.toString(this.ID)});
     }
 
     public void removeFavorite(){
-        //TODO
-        ;
+        isFavorite = false;
+        DBHelper.getSharedService().getWritableDatabase().update(getTableName(), getContentValues(), "id = ?", new String[]{Integer.toString(this.ID)});
     }
 }
