@@ -122,4 +122,16 @@ public class Show extends DBObject implements Serializable {
         isFavorite = false;
         DBHelper.getSharedService().getWritableDatabase().update(getTableName(), getContentValues(), "id = ?", new String[]{Integer.toString(this.ID)});
     }
+
+    public static Show getById(Integer id){
+        Show retVal = null;
+        Show s = new Show();
+        Cursor c = DBHelper.getSharedService().getWritableDatabase().query(s.getTableName(), s.getColumnNames(), "id = ?",  new String[]{Integer.toString(id)}, null, null, "sort_name");
+
+        if(c.moveToFirst()){
+            retVal = new Show(c);
+        }
+
+        return retVal;
+    }
 }

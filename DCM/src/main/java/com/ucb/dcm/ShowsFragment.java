@@ -42,14 +42,14 @@ public class ShowsFragment extends SherlockListFragment {
         return DataService.getSharedService().getShows(null);
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        ArrayList<Show> shows = getData();
-        mAdpt = new ShowsListAdapter(shows, getActivity().getLayoutInflater());
-        setListAdapter(mAdpt);
-    }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//
+//        ArrayList<Show> shows = getData();
+//        mAdpt = new ShowsListAdapter(shows, getActivity().getLayoutInflater());
+//        setListAdapter(mAdpt);
+//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
