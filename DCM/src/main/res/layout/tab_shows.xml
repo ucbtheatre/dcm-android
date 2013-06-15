@@ -10,9 +10,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-    <TextView android:id="@android:id/empty"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="#cccccc"
-              android:text="No data"/>
+    <RelativeLayout
+            android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#cccccc">
+            <TextView
+                    android:id="@+id/empty_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26dp"
+                    android:layout_centerInParent="true"
+                    />
+    </RelativeLayout>
+
 </LinearLayout>

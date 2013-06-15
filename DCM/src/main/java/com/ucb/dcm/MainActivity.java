@@ -18,7 +18,7 @@ import com.ucb.dcm.data.DataService;
 
 import java.util.HashMap;
 
-public class MainActivity extends SherlockFragmentActivity implements SearchView.OnQueryTextListener{
+public class MainActivity extends SherlockFragmentActivity {
     TabHost mTabHost;
     TabManager mTabManager;
 
@@ -192,28 +192,43 @@ public class MainActivity extends SherlockFragmentActivity implements SearchView
         switch(item.getItemId()){
             case R.id.menu_search:
                 SearchView sv = (SearchView) item.getActionView();
-                sv.setOnQueryTextListener(MainActivity.this);
+                sv.setQueryHint("Title or Performer");
+                sv.setOnQueryTextListener(new SearchListener(sv));
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public boolean onQueryTextSubmit(String s) {
-        if(mTabHost.getCurrentTabTag().equals(SHOWS_TAB)){
-            ShowsFragment frag = (ShowsFragment) mTabManager.mLastTab.fragment;
-            frag.setFilter(s);
+    private class SearchListener implements SearchView.OnQueryTextListener {
+
+        SearchView view;
+
+        public SearchListener(SearchView sv){
+            this.view = sv;
         }
-        return true;
+
+        @Override
+        public boolean onQueryTextSubmit(String s) {
+            if(mTabHost.getCurrentTabTag().equals(SHOWS_TAB)){
+                ShowsFragment frag = (ShowsFragment) mTabManager.mLastTab.fragment;
+                frag.setFilter(s);
+            }
+
+            view.clearFocus();
+
+            return true;
+        }
+
+        @Override
+        public boolean onQueryTextChange(String s) {
+            if(mTabHost.getCurrentTabTag().equals(SHOWS_TAB)){
+                ShowsFragment frag = (ShowsFragment) mTabManager.mLastTab.fragment;
+                frag.setFilter(s);
+            }
+            return true;
+        }
     }
 
-    @Override
-    public boolean onQueryTextChange(String s) {
-        if(mTabHost.getCurrentTabTag().equals(SHOWS_TAB)){
-            ShowsFragment frag = (ShowsFragment) mTabManager.mLastTab.fragment;
-            frag.setFilter(s);
-        }
-        return true;
-    }
+
 
 }

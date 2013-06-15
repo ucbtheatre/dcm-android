@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.actionbarsherlock.view.Menu;
@@ -53,7 +54,16 @@ public class ShowsFragment extends SherlockListFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.tab_shows, container, false);
+        View retVal = inflater.inflate(R.layout.tab_shows, container, false);
+
+        TextView empty = (TextView) retVal.findViewById(R.id.empty_title);
+        empty.setText(getEmptyText());
+
+        return retVal;
+    }
+
+    protected String getEmptyText() {
+        return "No Matching Shows.";
     }
 
     @Override

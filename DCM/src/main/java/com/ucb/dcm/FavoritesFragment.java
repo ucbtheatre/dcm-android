@@ -1,6 +1,11 @@
 package com.ucb.dcm;
 
 import android.app.Activity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import com.ucb.dcm.data.DataService;
 import com.ucb.dcm.data.Show;
 import com.ucb.dcm.list.ShowsListAdapter;
@@ -15,6 +20,11 @@ public class FavoritesFragment extends  ShowsFragment {
     protected ArrayList<Show> getData() {
         return DataService.getSharedService().getFavorites();
     }
+
+    protected String getEmptyText() {
+        return "No Favorites.";
+    }
+
 
     @Override
     public void onResume() {
