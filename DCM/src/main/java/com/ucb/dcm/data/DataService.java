@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -159,32 +160,43 @@ public class DataService {
     }
 
     public void processSchedules(JSONObject results){
+        SQLiteDatabase db = DBHelper.getSharedService().getWritableDatabase();
         try{
             JSONArray shows = results.getJSONArray("Schedules");
+
+            db.beginTransaction();
             for(int i = 0; i < shows.length(); i++){
                 JSONObject jsonPerf = shows.getJSONObject(i).getJSONObject("Schedule");
                 Performance perf = Performance.fromJson(jsonPerf);
-                perf.insert(DBHelper.getSharedService().getWritableDatabase());
+                perf.insert(db);
             }
-
+            db.setTransactionSuccessful();
         }
         catch(JSONException je){
             je.printStackTrace();
         }
+        finally {
+            db.endTransaction();
+        }
     }
 
     public void processShows(JSONObject results){
+        SQLiteDatabase db = DBHelper.getSharedService().getWritableDatabase();
         try{
+            db.beginTransaction();
             JSONArray shows = results.getJSONArray("Shows");
             for(int i = 0; i < shows.length(); i++){
                 JSONObject jsonShow = shows.getJSONObject(i).getJSONObject("Show");
                 Show show = Show.fromJson(jsonShow);
                 show.insert(DBHelper.getSharedService().getWritableDatabase());
             }
-
+            db.setTransactionSuccessful();
         }
         catch(JSONException je){
             je.printStackTrace();
+        }
+        finally {
+            db.endTransaction();
         }
     }
 
