@@ -168,6 +168,10 @@ public class MainActivity extends SherlockFragmentActivity {
         }
     }
 
+    public void onScheduleDownloaded(){
+        mTabManager.mLastTab.fragment.onResume();
+    }
+
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         menu.clear();

@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
+import com.ucb.dcm.MainActivity;
 import com.ucb.dcm.net.ExecuteURLDownload;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -74,8 +75,6 @@ public class DataService {
         @Override
         public void onSuccess(JSONObject result) {
             Log.v(TAG,"Schedule download complete.  Beginning processing.");
-            Toast t = Toast.makeText(context, "Schedule downloaded", Toast.LENGTH_LONG);
-            t.show();
 
             dialog.setMessage("Processing Venues.");
             AsyncTask<JSONObject, Integer, String> dbUpdate = new AsyncTask<JSONObject, Integer, String>() {
@@ -112,6 +111,13 @@ public class DataService {
                     aaa.runOnUiThread(new Runnable() {
                         public void run() {
                             dialog.hide();
+                        }
+                    });
+
+                    aaa.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            ((MainActivity)context).onScheduleDownloaded();
                         }
                     });
 
