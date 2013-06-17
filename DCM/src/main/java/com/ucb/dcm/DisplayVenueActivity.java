@@ -49,7 +49,7 @@ public class DisplayVenueActivity extends SherlockListActivity {
         Show show = new Show(c);
 
         Intent displayShow = new Intent(this, ViewShowFragment.class);
-        displayShow.putExtra(ViewShowFragment.SHOW_KEY, show);
+        displayShow.putExtra(ViewShowFragment.SHOW_KEY, show.ID);
         startActivity(displayShow);
     }
 }

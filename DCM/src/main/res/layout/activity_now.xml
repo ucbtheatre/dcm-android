@@ -9,13 +9,29 @@
     <LinearLayout
             android:id="@+id/countdown"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
+            android:paddingBottom="20dp"
+            android:background="#cccccc"
             >
+        <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!-->-->
+            <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Hey, chill out, there's"-->
+                    <!--android:textSize="23dp"-->
+                    <!--android:paddingBottom="15dp"-->
+                    <!--/>-->
+
+        <!--</LinearLayout>-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             >
             <LinearLayout
@@ -105,14 +121,16 @@
         </LinearLayout>
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:visibility="gone"
                 >
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="until the Del Close Marathon"
+                        android:text="until the DCM"
+                        android:gravity="center"
+                        android:textSize="23dp"
+                        android:paddingTop="15dp"
                         />
 
         </LinearLayout>
