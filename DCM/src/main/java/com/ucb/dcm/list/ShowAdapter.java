@@ -114,6 +114,16 @@ public class ShowAdapter extends BaseAdapter {
             }
         }
 
+        private void hideImage(final ImageView image){
+            Activity aaa = (Activity) image.getContext();
+            aaa.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    image.setVisibility(View.GONE);
+                }
+            });
+        }
+
         public View getView(int i, View view, ViewGroup parent) {
             View retVal = mInflater.inflate(R.layout.list_show_summary, parent, false);
 
@@ -137,16 +147,24 @@ public class ShowAdapter extends BaseAdapter {
                                     .decodeStream((InputStream) new URL(params[0])
                                             .getContent());
 
-                            Activity aaa = (Activity) image.getContext();
-
-                            aaa.runOnUiThread(new ImageSetter(image, bitmap));
+                            if(bitmap != null){
+                                Activity aaa = (Activity) image.getContext();
+                                aaa.runOnUiThread(new ImageSetter(image, bitmap));
+                            }
+                            else {
+                                //problem downloading?
+                                hideImage(image);
+                            }
 
                         } catch (MalformedURLException e) {
                             e.printStackTrace();
+                            hideImage(image);
                         } catch (IOException e) {
                             e.printStackTrace();
+                            hideImage(image);
                         } catch (OutOfMemoryError e){
                             e.printStackTrace();
+                            hideImage(image);
                         }
 
                         return null;

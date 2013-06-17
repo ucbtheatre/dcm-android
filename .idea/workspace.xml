@@ -125,7 +125,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowAdapter.java" line="126" class="com.ucb.dcm.list.ShowAdapter.SummaryAdapter" package="com.ucb.dcm.list">
+      <breakpoint url="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowAdapter.java" line="136" class="com.ucb.dcm.list.ShowAdapter.SummaryAdapter" package="com.ucb.dcm.list">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -183,10 +183,12 @@
       <file leaf-file-name="ShowAdapter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="18" selection-start="2800" selection-end="2844" vertical-scroll-proportion="0.11193112" vertical-offset="1229" max-vertical-offset="3030">
+            <state line="166" column="45" selection-start="5164" selection-end="5164" vertical-scroll-proportion="0.90528905" vertical-offset="1409" max-vertical-offset="3300">
               <folding>
-                <element signature="e#3609#4557#0" expanded="true" />
-                <element signature="e#4537#4538#0" expanded="true" />
+                <element signature="e#3013#3175#0" expanded="true" />
+                <element signature="e#3160#3161#0" expanded="true" />
+                <element signature="e#3928#5269#0" expanded="true" />
+                <element signature="e#5249#5250#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -988,7 +990,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="400" y="22" width="2160" height="1291" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20769848" sideWeight="0.6702479" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1001,7 +1003,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22084722" sideWeight="0.28793103" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23654996" sideWeight="0.49698493" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28181043" sideWeight="0.68442214" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28181043" sideWeight="0.68442214" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971668" sideWeight="0.60087335" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1206,10 +1208,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="18" selection-start="2800" selection-end="2844" vertical-scroll-proportion="0.11193112" vertical-offset="1229" max-vertical-offset="3030">
+        <state line="166" column="45" selection-start="5164" selection-end="5164" vertical-scroll-proportion="0.90528905" vertical-offset="1409" max-vertical-offset="3300">
           <folding>
-            <element signature="e#3609#4557#0" expanded="true" />
-            <element signature="e#4537#4538#0" expanded="true" />
+            <element signature="e#3013#3175#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
+            <element signature="e#3928#5269#0" expanded="true" />
+            <element signature="e#5249#5250#0" expanded="true" />
           </folding>
         </state>
       </provider>
