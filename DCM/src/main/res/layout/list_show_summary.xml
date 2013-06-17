@@ -21,6 +21,13 @@
             android:textSize="18dp"
             android:textStyle="italic"
             />
+    <ImageView
+            android:id="@+id/show_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            />
     <TextView
             android:id="@+id/show_promo"
             android:layout_width="match_parent"

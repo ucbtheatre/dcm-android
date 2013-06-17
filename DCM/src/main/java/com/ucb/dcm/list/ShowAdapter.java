@@ -1,17 +1,26 @@
 package com.ucb.dcm.list;
 
+import android.app.Activity;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.ucb.dcm.R;
 import com.ucb.dcm.data.Performance;
 import com.ucb.dcm.data.Show;
 import com.ucb.dcm.data.Venue;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -87,6 +96,24 @@ public class ShowAdapter extends BaseAdapter {
             this.mShow = show;
         }
 
+        private class ImageSetter implements Runnable{
+
+            Bitmap bmp;
+            ImageView image;
+
+            public ImageSetter(ImageView image, Bitmap bmp){
+                this.image = image;
+                this.bmp = bmp;
+            }
+
+            @Override
+            public void run() {
+                image.setImageBitmap(bmp);
+//                bmp.recycle();
+//                bmp = null;
+            }
+        }
+
         public View getView(int i, View view, ViewGroup parent) {
             View retVal = mInflater.inflate(R.layout.list_show_summary, parent, false);
 
@@ -96,6 +123,40 @@ public class ShowAdapter extends BaseAdapter {
             city.setText(mShow.city);
             TextView promo = (TextView) retVal.findViewById(R.id.show_promo);
             promo.setText(mShow.promo);
+
+            if(mShow.image != null){
+                final ImageView image = (ImageView) retVal.findViewById(R.id.show_image);
+                image.setVisibility(View.VISIBLE);
+
+                AsyncTask<String, Integer, String> o = new AsyncTask<String, Integer, String>() {
+
+                    @Override
+                    protected String doInBackground(String... params) {
+                        try {
+                            Bitmap bitmap = BitmapFactory
+                                    .decodeStream((InputStream) new URL(params[0])
+                                            .getContent());
+
+                            Activity aaa = (Activity) image.getContext();
+
+                            aaa.runOnUiThread(new ImageSetter(image, bitmap));
+
+                        } catch (MalformedURLException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (OutOfMemoryError e){
+                            e.printStackTrace();
+                        }
+
+                        return null;
+                    }
+
+                };
+
+                o.execute(mShow.image);
+            }
+
 
             return retVal;
         }

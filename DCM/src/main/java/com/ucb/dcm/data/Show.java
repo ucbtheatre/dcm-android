@@ -32,6 +32,9 @@ public class Show extends DBObject implements Serializable {
     @DBColumn(columnName = "performers")
     public String performers;
 
+    @DBColumn(columnName = "image")
+    public String image;
+
     @DBColumn(columnName = "favorite", dataType = DBColumn.DataType.BOOL)
     public boolean isFavorite;
 
@@ -57,6 +60,11 @@ public class Show extends DBObject implements Serializable {
         retVal.city = json.getString("home_city");
         retVal.isFavorite = false;
 
+        if(json.has("image")){
+            retVal.image = json.getString("image");
+        }
+
+        //Figure out the sorting.
         String sortName = retVal.name.toLowerCase();
 
         if(sortName.startsWith("'")){
@@ -73,6 +81,7 @@ public class Show extends DBObject implements Serializable {
 
         retVal.sortName = sortName;
 
+        //Process the performers
         JSONArray perfsJSON = json.getJSONArray("cast");
         String[] perfsArray = new String[perfsJSON.length()];
         for(int i = 0; i < perfsJSON.length(); i++){
