@@ -164,7 +164,8 @@ public class MainActivity extends SherlockFragmentActivity {
             }
 
             //Do this so we can show the search button or not.
-            mActivity.invalidateOptionsMenu();
+            mActivity.supportInvalidateOptionsMenu();
+            //mActivity.invalidateOptionsMenu();
         }
     }
 

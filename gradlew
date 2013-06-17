@@ -29,7 +29,7 @@ die ( ) {
 # OS specific support (must be 'true' or 'false').
 cygwin=false
 msys=false
-darwin=false
+darwin=true
 case "`uname`" in
   CYGWIN* )
     cygwin=true
@@ -107,7 +107,7 @@ fi
 
 # For Darwin, add options to specify how the application appears in the dock
 if $darwin; then
-    GRADLE_OPTS="$GRADLE_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
+    GRADLE_OPTS="$GRADLE_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\"" \"-Xmx1024m\" \"-Xms256m\" \"-XX:MaxPermSize=1024m\""
 fi
 
 # For Cygwin, switch paths to Windows format before running java

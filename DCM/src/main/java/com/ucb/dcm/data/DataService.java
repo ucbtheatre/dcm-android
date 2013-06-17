@@ -144,7 +144,7 @@ public class DataService {
 
             ProgressDialog dialog = ProgressDialog.show(this.context, "Updating the schedule", "Fetching from the server", true);
 
-            new ExecuteURLDownload(new UpdateServerListener(dialog)).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, jsonFile);
+            new ExecuteURLDownload(new UpdateServerListener(dialog)).execute(jsonFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
