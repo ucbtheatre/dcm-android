@@ -70,7 +70,7 @@ public class ShowsFragment extends SherlockListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         Intent displayShow = new Intent(getActivity(), ViewShowFragment.class);
         Show show = (Show) getListAdapter().getItem(position);
-        displayShow.putExtra(ViewShowFragment.SHOW_KEY, show);
+        displayShow.putExtra(ViewShowFragment.SHOW_KEY, show.ID);
         startActivity(displayShow);
     }
 

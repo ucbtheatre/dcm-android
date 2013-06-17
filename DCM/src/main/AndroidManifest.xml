@@ -20,12 +20,21 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ViewShowFragment"/>
-        <activity android:name=".NowActivity"/>
-        <activity android:name=".DisplayVenueActivity"/>
+        <activity android:name="com.ucb.dcm.ViewShowFragment" />
+        <activity android:name="com.ucb.dcm.NowActivity" />
+        <activity android:name="com.ucb.dcm.DisplayVenueActivity" />
+        <activity
+            android:name="com.ucb.dcm.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName="com.ucb.dcm.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ucb.dcm.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

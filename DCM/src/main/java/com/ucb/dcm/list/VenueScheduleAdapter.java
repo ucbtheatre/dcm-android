@@ -67,8 +67,6 @@ public class VenueScheduleAdapter extends CursorAdapter implements StickyListHea
 
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm a");
         sh.time.setText(sdf.format(new Date(((long)start_date) * 1000)));
-
-        TextView showName = (TextView) view.findViewById(R.id.schedule_show_name);
         sh.name.setText(name);
     }
 

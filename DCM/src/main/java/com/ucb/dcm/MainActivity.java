@@ -37,6 +37,9 @@ public class MainActivity extends SherlockFragmentActivity {
         //setTheme(SampleList.THEME); //Used for theme switching in samples
         super.onCreate(savedInstanceState);
 
+
+        setTitle("Del Close Marathon 15");
+
         setContentView(R.layout.activity_main);
         mTabHost = (TabHost)findViewById(android.R.id.tabhost);
         mTabHost.setup();

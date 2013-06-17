@@ -211,6 +211,7 @@ public class DataService {
     }
 
     public ArrayList<Venue> getVenues(){
-        return Venue.getAll(DBHelper.getSharedService().getWritableDatabase(), "name");
+        return Venue.getAll(DBHelper.getSharedService().getWritableDatabase(), "id");
     }
+
 }

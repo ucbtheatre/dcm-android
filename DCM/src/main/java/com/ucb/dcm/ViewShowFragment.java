@@ -31,10 +31,10 @@ public class ViewShowFragment extends SherlockListActivity {
         setTitle("Show");
 
         //Hook up the list.
-        mShow = (Show) getIntent().getSerializableExtra(SHOW_KEY);
+        int show_id = getIntent().getIntExtra(SHOW_KEY, 0);
 
         //We refresh the data because the source list is out of date
-        mShow = Show.getById(mShow.ID);
+        mShow = Show.getById(show_id);
         setListAdapter(new ShowAdapter(getLayoutInflater(), mShow));
     }
 
