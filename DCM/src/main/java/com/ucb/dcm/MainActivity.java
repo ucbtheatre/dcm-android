@@ -1,6 +1,7 @@
 package com.ucb.dcm;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -217,6 +218,10 @@ public class MainActivity extends SherlockFragmentActivity {
                 SearchView sv = (SearchView) item.getActionView();
                 sv.setQueryHint("Title or Performer");
                 sv.setOnQueryTextListener(new SearchListener(sv));
+                break;
+            case R.id.about:
+                Intent aboutIntent = new Intent(this, AboutActivity.class);
+                startActivity(aboutIntent);
         }
 
         return super.onOptionsItemSelected(item);
