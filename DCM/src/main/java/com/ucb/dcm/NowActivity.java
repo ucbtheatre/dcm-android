@@ -31,15 +31,23 @@ import java.util.Timer;
 
 public class NowActivity extends SherlockFragment {
 
-    //Remember, months are 0 indexed for some reason.
-    public static final Date MARATHON_START_DATE = new Date(2013 - 1900, 5, 28, 16, 30, 0);
+    // TODO: Get start date from schedule data; show message before initial download.
+    // Remember, months are 0 indexed for some reason.
+    public static final Date MARATHON_START_DATE = new Date(2013 - 1900, 6 - 1, 28, 16, 30, 0);
 
     private Handler clock;
     private Runnable updateClockRunnable = new Runnable() {
         @Override
         public void run() {
             updateClock();
-            clock.postDelayed(this, 1000);
+            clock.postDelayed(this, timeIntervalUntilNextMinuteChange());
+        }
+        private long timeIntervalUntilNextMinuteChange() {
+            Calendar cal = Calendar.getInstance();
+            cal.set(Calendar.MILLISECOND, 0);
+            cal.set(Calendar.SECOND, 0);
+            cal.add(Calendar.MINUTE, 1);
+            return cal.getTimeInMillis() - System.currentTimeMillis();
         }
     };
 
@@ -120,6 +128,7 @@ public class NowActivity extends SherlockFragment {
         int minutesVal = (secondsBetween - daysVal * 60 * 60 * 24 - hoursVal * 60 * 60) / 60;
         minutes.setText(Integer.toString(minutesVal));
 
+        // TODO: Remove this since we are now only updating once a minute.
         TextView seconds = (TextView) getView().findViewById(R.id.countdown_seconds);
         int secondsVal = (secondsBetween - daysVal * 60 * 60 * 24 - hoursVal * 60 * 60 - minutesVal * 60);
         seconds.setText(Integer.toString(secondsVal));
