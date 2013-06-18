@@ -1,5 +1,6 @@
 package com.ucb.dcm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TabHost;
@@ -9,6 +10,7 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.app.SherlockListActivity;
 import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.widget.ShareActionProvider;
 import com.ucb.dcm.data.DBHelper;
 import com.ucb.dcm.data.DataService;
 import com.ucb.dcm.data.Show;
@@ -38,6 +40,8 @@ public class ViewShowFragment extends SherlockListActivity {
         setListAdapter(new ShowAdapter(getLayoutInflater(), mShow));
     }
 
+    ShareActionProvider mShareActionProvider;
+
     @Override
     public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
         getSupportMenuInflater().inflate(R.menu.show, menu);
@@ -48,6 +52,17 @@ public class ViewShowFragment extends SherlockListActivity {
         else{
             fav.setIcon(R.drawable.ic_action_not_favorite);
         }
+
+        // Locate MenuItem with ShareActionProvider
+        MenuItem share = menu.findItem(R.id.show_share);
+        // Fetch and store ShareActionProvider
+        mShareActionProvider = (ShareActionProvider) share.getActionProvider();
+
+        Intent shareIntent = new Intent(android.content.Intent.ACTION_SEND);
+        String twoot = "I'm planning on going to " + mShow.name + " at the #DCM15";
+        shareIntent.putExtra(Intent.EXTRA_TEXT, twoot);
+        shareIntent.setType("text/plain");
+        mShareActionProvider.setShareIntent(shareIntent);
         return true;
     }
 
@@ -67,7 +82,6 @@ public class ViewShowFragment extends SherlockListActivity {
                 }
 
                 break;
-
         }
         return super.onMenuItemSelected(featureId, item);
     }

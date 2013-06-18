@@ -6,8 +6,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
@@ -34,9 +37,10 @@ public class MainActivity extends SherlockFragmentActivity {
         if(DataService.getSharedService().shouldUpdate()){
             DataService.getSharedService().updateFromServer(null);
         }
-        //setTheme(SampleList.THEME); //Used for theme switching in samples
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
 
+        //getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         setTitle("Del Close Marathon 15");
 
@@ -45,15 +49,28 @@ public class MainActivity extends SherlockFragmentActivity {
         mTabHost.setup();
 
         mTabManager = new TabManager(this, mTabHost, R.id.realtabcontent);
-
-        mTabManager.addTab(mTabHost.newTabSpec("Now").setIndicator("Now"), NowActivity.class, null);
+        TabHost.TabSpec nowSpec =  mTabHost.newTabSpec("Now").setIndicator("Now");
+        mTabManager.addTab(nowSpec, NowActivity.class, null);
         mTabManager.addTab(mTabHost.newTabSpec(SHOWS_TAB).setIndicator("Shows"), ShowsFragment.class, null);
         mTabManager.addTab(mTabHost.newTabSpec("Venues").setIndicator("Venues"), VenuesFragment.class, null);
-        mTabManager.addTab(mTabHost.newTabSpec("Favs").setIndicator("Favs"), FavoritesFragment.class, null);
+
+        TabHost.TabSpec favSpec = mTabHost.newTabSpec("Favs").setIndicator("Favs");
+        //favSpec.setIndicator(createTabView("Favs", R.drawable.ic_action_favorite));
+        mTabManager.addTab(favSpec, FavoritesFragment.class, null);
+
 
         if (savedInstanceState != null) {
             mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));
         }
+    }
+
+    private View createTabView(String title, int drawableId){
+        View retVal = getLayoutInflater().inflate(R.layout.tab_indicator, mTabHost.getTabWidget(), false);
+        TextView label = (TextView) retVal.findViewById(R.id.tab_label);
+        label.setText(title);
+        ImageView icon = (ImageView) retVal.findViewById(R.id.tab_icon);
+        icon.setImageDrawable(getResources().getDrawable(drawableId));
+        return retVal;
     }
 
     @Override
@@ -150,8 +167,7 @@ public class MainActivity extends SherlockFragmentActivity {
                 }
                 if (newTab != null) {
                     if (newTab.fragment == null) {
-                        newTab.fragment = Fragment.instantiate(mActivity,
-                                newTab.clss.getName(), newTab.args);
+                        newTab.fragment = Fragment.instantiate(mActivity, newTab.clss.getName(), newTab.args);
                         ft.add(mContainerId, newTab.fragment, newTab.tag);
                     } else {
                         ft.attach(newTab.fragment);
@@ -165,7 +181,7 @@ public class MainActivity extends SherlockFragmentActivity {
 
             //Do this so we can show the search button or not.
             mActivity.supportInvalidateOptionsMenu();
-            //mActivity.invalidateOptionsMenu();
+
         }
     }
 
@@ -180,8 +196,7 @@ public class MainActivity extends SherlockFragmentActivity {
         if(mTabHost.getCurrentTabTag().equals(SHOWS_TAB)){
             menu.findItem(R.id.menu_search).setVisible(true);
         }
-        else
-        {
+        else {
             menu.findItem(R.id.menu_search).setVisible(false);
         }
 

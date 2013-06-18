@@ -15,6 +15,21 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="@style/Theme.Sherlock.Light.DarkActionBar">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="actionBarTabStyle">@style/DCMTabStyle</item>
+        <item name="android:actionBarTabStyle">@style/DCMTabStyle</item>
+        <item name="actionBarTabTextStyle">@style/DCMTabTextStyle</item>
+        <item name="android:actionBarTabTextStyle">@style/DCMTabTextStyle</item>
     </style>
+
+    <style name="DCMTabStyle" parent="Widget.Sherlock.ActionBar.TabView">
+        <item name="android:background">#f0c0d0</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="DCMTabTextStyle" parent="Widget.Sherlock.ActionBar.TabText">
+        <item name="android:textSize">5sp</item>
+    </style>
+
 
 </resources>
