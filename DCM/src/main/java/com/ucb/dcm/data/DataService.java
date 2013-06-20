@@ -55,10 +55,10 @@ public class DataService {
         return getVenues().size() == 0;
     }
 
-//    public boolean refreshData(){
-//        Venue.deleteAll();
-//        Show.deleteAll();
-//    }
+    public boolean refreshData(){
+        updateFromServer(null);
+        return true;
+    }
 
     ////////
     // Downloading the data
@@ -75,6 +75,23 @@ public class DataService {
         @Override
         public void onSuccess(JSONObject result) {
             Log.v(TAG,"Schedule download complete.  Beginning processing.");
+
+
+            //Backup Favorites
+            Cursor c = DataService.getSharedService().getFavorites();
+
+            final ArrayList<Integer> favorites = new ArrayList<Integer>();
+
+            while(c.moveToNext()){
+                int show_id = c.getInt(c.getColumnIndex("show_id"));
+                if(!favorites.contains(show_id)){
+                    favorites.add(show_id);
+                }
+            }
+
+            new Venue().deleteAll(DBHelper.getSharedService().getWritableDatabase());
+            new Show().deleteAll(DBHelper.getSharedService().getWritableDatabase());
+            new Performance().deleteAll(DBHelper.getSharedService().getWritableDatabase());
 
             dialog.setMessage("Processing Venues.");
             AsyncTask<JSONObject, Integer, String> dbUpdate = new AsyncTask<JSONObject, Integer, String>() {
@@ -106,8 +123,19 @@ public class DataService {
                             dialog.setMessage("Processing Schedules.");
                         }
                     });
+
+
                     //dialog.setMessage("Processing Schedules.");
                     processSchedules(js);
+
+                    //restore favorites
+                    for(Integer i : favorites){
+                        Show s = Show.getById(i);
+                        if(i != null){
+                            s.addFavorite();
+                        }
+                    }
+
                     aaa.runOnUiThread(new Runnable() {
                         public void run() {
                             dialog.hide();
@@ -120,6 +148,8 @@ public class DataService {
                             ((MainActivity)context).onScheduleDownloaded();
                         }
                     });
+
+
 
                     return null;
                 }

@@ -1,6 +1,9 @@
 package com.ucb.dcm;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -50,13 +53,22 @@ public class MainActivity extends SherlockFragmentActivity {
         mTabHost.setup();
 
         mTabManager = new TabManager(this, mTabHost, R.id.realtabcontent);
-        TabHost.TabSpec nowSpec =  mTabHost.newTabSpec("Now").setIndicator("Now");
+
+        TabHost.TabSpec nowSpec =  mTabHost.newTabSpec("Now");
+        nowSpec.setIndicator("Now", getResources().getDrawable(R.drawable.ic_action_now));
         mTabManager.addTab(nowSpec, NowActivity.class, null);
-        mTabManager.addTab(mTabHost.newTabSpec(SHOWS_TAB).setIndicator("Shows"), ShowsFragment.class, null);
-        mTabManager.addTab(mTabHost.newTabSpec("Venues").setIndicator("Venues"), VenuesFragment.class, null);
+
+        TabHost.TabSpec showsSpec = mTabHost.newTabSpec(SHOWS_TAB);
+        showsSpec.setIndicator("Shows", getResources().getDrawable(R.drawable.ic_action_shows));
+        mTabManager.addTab(showsSpec, ShowsFragment.class, null);
+
+        TabHost.TabSpec venueSpec = mTabHost.newTabSpec("Venues");
+        venueSpec.setIndicator("Now", getResources().getDrawable(R.drawable.ic_action_venues));
+        mTabManager.addTab(venueSpec, VenuesFragment.class, null);
 
         TabHost.TabSpec favSpec = mTabHost.newTabSpec("Favs").setIndicator("Favs");
-        //favSpec.setIndicator(createTabView("Favs", R.drawable.ic_action_favorite));
+        favSpec.setIndicator("Favs", getResources().getDrawable(R.drawable.ic_action_favorite));
+
         mTabManager.addTab(favSpec, FavoritesFragment.class, null);
 
 
@@ -65,14 +77,14 @@ public class MainActivity extends SherlockFragmentActivity {
         }
     }
 
-    private View createTabView(String title, int drawableId){
-        View retVal = getLayoutInflater().inflate(R.layout.tab_indicator, mTabHost.getTabWidget(), false);
-        TextView label = (TextView) retVal.findViewById(R.id.tab_label);
-        label.setText(title);
-        ImageView icon = (ImageView) retVal.findViewById(R.id.tab_icon);
-        icon.setImageDrawable(getResources().getDrawable(drawableId));
-        return retVal;
-    }
+//    private View createTabView(String title, int drawableId){
+//        View retVal = getLayoutInflater().inflate(R.layout.tab_indicator, mTabHost.getTabWidget(), false);
+//        TextView label = (TextView) retVal.findViewById(R.id.tab_label);
+//        label.setText(title);
+//        ImageView icon = (ImageView) retVal.findViewById(R.id.tab_icon);
+//        icon.setImageDrawable(getResources().getDrawable(drawableId));
+//        return retVal;
+//    }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -222,6 +234,21 @@ public class MainActivity extends SherlockFragmentActivity {
             case R.id.about:
                 Intent aboutIntent = new Intent(this, AboutActivity.class);
                 startActivity(aboutIntent);
+                break;
+            case R.id.refresh:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Refresh the schedule?");
+                builder.setMessage("This will fetch the latest schedule from the server.  You will not lose your favorites.");
+                builder.setNegativeButton("Cancel", null);
+                builder.setPositiveButton("OK!", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        DataService.getSharedService().refreshData();
+                    }
+                });
+                builder.create().show();
+                break;
         }
 
         return super.onOptionsItemSelected(item);

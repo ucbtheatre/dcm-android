@@ -3,6 +3,10 @@
         android:title="About"
         android:orderInCategory="100"
         android:showAsAction="never" />
+    <item android:id="@+id/refresh"
+          android:title="Refresh Schedule"
+          android:orderInCategory="100"
+          android:showAsAction="never" />
     <item android:id="@+id/menu_search"
           android:title="search"
           android:icon="@android:drawable/ic_menu_search"

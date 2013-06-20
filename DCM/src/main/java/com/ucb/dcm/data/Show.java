@@ -129,7 +129,7 @@ public class Show extends DBObject implements Serializable {
 
     public void removeFavorite(){
         isFavorite = false;
-        DBHelper.getSharedService().getWritableDatabase().update(getTableName(), getContentValues(), "id = ?", new String[]{Integer.toString(this.ID)});
+        DBHelper.getSharedService().getWritableDatabase().update(new Show().getTableName(), getContentValues(), "id = ?", new String[]{Integer.toString(this.ID)});
     }
 
     public static Show getById(Integer id){
