@@ -26,7 +26,7 @@ import java.util.Date;
 public class NowActivity extends SherlockFragment {
 
     //Remember, months are 0 indexed for some reason.
-    public static final Date MARATHON_START_DATE = new Date(2013 - 1900, 5, 28, 16, 30, 0);
+    public static final Date MARATHON_START_DATE = new Date(2013 - 1900, 5, 28, 16, 00, 0);
 
     private Handler clock;
     private Runnable updateClockRunnable = new Runnable() {
