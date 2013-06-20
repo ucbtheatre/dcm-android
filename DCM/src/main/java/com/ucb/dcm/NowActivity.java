@@ -1,27 +1,21 @@
 package com.ucb.dcm;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.emilsjolander.components.stickylistheaders.StickyListHeadersListView;
 import com.ucb.dcm.data.*;
 import com.ucb.dcm.list.NowListAdapter;
-import com.ucb.dcm.list.VenueScheduleAdapter;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Timer;
 
 /**
  * Created by kurtguenther on 6/5/13.
@@ -49,7 +43,12 @@ public class NowActivity extends SherlockFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_now, container, false);
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+            return inflater.inflate(R.layout.activity_now_land, container, false);
+        }
+        else {
+            return inflater.inflate(R.layout.activity_now, container, false);
+        }
     }
 
     @Override
@@ -110,19 +109,27 @@ public class NowActivity extends SherlockFragment {
 
         TextView days = (TextView) getView().findViewById(R.id.countdown_days);
         int daysVal = (secondsBetween / (60 * 60 * 24));
-        days.setText(Integer.toString(daysVal));
+        days.setText(formatInt(daysVal));
 
         TextView hours = (TextView) getView().findViewById(R.id.countdown_hours);
         int hoursVal = (secondsBetween - daysVal * 60 * 60 * 24) / (60 * 60);
-        hours.setText(Integer.toString(hoursVal));
+        hours.setText(formatInt(hoursVal));
 
         TextView minutes = (TextView) getView().findViewById(R.id.countdown_minutes);
         int minutesVal = (secondsBetween - daysVal * 60 * 60 * 24 - hoursVal * 60 * 60) / 60;
-        minutes.setText(Integer.toString(minutesVal));
+        minutes.setText(formatInt(minutesVal));
 
         TextView seconds = (TextView) getView().findViewById(R.id.countdown_seconds);
         int secondsVal = (secondsBetween - daysVal * 60 * 60 * 24 - hoursVal * 60 * 60 - minutesVal * 60);
-        seconds.setText(Integer.toString(secondsVal));
+        seconds.setText(formatInt(secondsVal));
+    }
+
+    public String formatInt(int val){
+        String retVal = Integer.toString(val);
+//        if(val < 10 && val >= 0){
+//            retVal = "0" + retVal;
+//        }
+        return retVal;
     }
 
     @Override
