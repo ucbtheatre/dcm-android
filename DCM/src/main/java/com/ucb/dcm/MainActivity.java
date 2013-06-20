@@ -63,7 +63,7 @@ public class MainActivity extends SherlockFragmentActivity {
         mTabManager.addTab(showsSpec, ShowsFragment.class, null);
 
         TabHost.TabSpec venueSpec = mTabHost.newTabSpec("Venues");
-        venueSpec.setIndicator("Now", getResources().getDrawable(R.drawable.ic_action_venues));
+        venueSpec.setIndicator("Venues", getResources().getDrawable(R.drawable.ic_action_venues));
         mTabManager.addTab(venueSpec, VenuesFragment.class, null);
 
         TabHost.TabSpec favSpec = mTabHost.newTabSpec("Favs").setIndicator("Favs");

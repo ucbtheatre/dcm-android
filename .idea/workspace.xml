@@ -151,10 +151,19 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="17" selection-start="2729" selection-end="2729" vertical-scroll-proportion="0.6345382" vertical-offset="636" max-vertical-offset="4365">
+            <state line="80" column="3" selection-start="2919" selection-end="2919" vertical-scroll-proportion="0.7550201" vertical-offset="636" max-vertical-offset="4365">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCM/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="41" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -217,7 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/DCM/src/main/res/layout/activity_now_land.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/NowActivity.java" />
         <option value="$PROJECT_DIR$/DCM/src/main/res/values-v14/styles.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/list/ShowAdapter.java" />
@@ -232,6 +240,7 @@
         <option value="$PROJECT_DIR$/DCM/src/main/res/menu/main.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/Show.java" />
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/data/DataService.java" />
+        <option value="$PROJECT_DIR$/DCM/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java" />
       </list>
     </option>
@@ -986,13 +995,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/FavoritesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="5" selection-start="1244" selection-end="1244" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/ShowsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="0" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.43881857" vertical-offset="108" max-vertical-offset="855">
@@ -1095,9 +1097,16 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DCM/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="41" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DCM/src/main/java/com/ucb/dcm/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="17" selection-start="2729" selection-end="2729" vertical-scroll-proportion="0.6345382" vertical-offset="636" max-vertical-offset="4365">
+        <state line="80" column="3" selection-start="2919" selection-end="2919" vertical-scroll-proportion="0.7550201" vertical-offset="636" max-vertical-offset="4365">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
