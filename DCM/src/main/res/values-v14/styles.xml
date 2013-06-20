@@ -9,4 +9,9 @@
         <!-- API 14 theme customizations can go here. -->
     </style>
 
+    <style name="VenueHeaderText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 </resources>

@@ -109,8 +109,6 @@ public class ShowAdapter extends BaseAdapter {
             @Override
             public void run() {
                 image.setImageBitmap(bmp);
-//                bmp.recycle();
-//                bmp = null;
             }
         }
 

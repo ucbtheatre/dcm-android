@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/venue_globe"
+          android:title="globe"
+          android:icon="@drawable/ic_action_globe"
+          android:showAsAction="always"
+          android:visible="true"/>
+    <item android:id="@+id/venue_map"
+          android:title="map"
+          android:icon="@drawable/ic_action_map"
+          android:showAsAction="always"
+          android:visible="false"/>
+</menu>
