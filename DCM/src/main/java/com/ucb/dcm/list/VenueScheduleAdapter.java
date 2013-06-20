@@ -54,12 +54,6 @@ public class VenueScheduleAdapter extends CursorAdapter implements StickyListHea
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-//        Performance p = new Performance(cursor);
-//        Show s = new Show(cursor);
-//
-//        int start_date = p.start_date;
-//        String name = s.name;
-
         int start_date = cursor.getInt(cursor.getColumnIndex("start_date"));
         String name = cursor.getString(cursor.getColumnIndex("name"));
 

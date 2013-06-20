@@ -75,7 +75,7 @@ public class DisplayVenueActivity extends SherlockListActivity {
     @Override
     public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
         getSupportMenuInflater().inflate(R.menu.venue, menu);
-        MenuItem map = menu.findItem(R.id.venue_globe);
+        MenuItem map = menu.findItem(R.id.venue_map);
         map.setVisible(mVenue.gmaps != null && !mVenue.gmaps.equals(""));
         return true;
     }
@@ -83,7 +83,7 @@ public class DisplayVenueActivity extends SherlockListActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
-            case R.id.venue_globe:
+            case R.id.venue_map:
                 String uri = mVenue.gmaps;
                 Intent map = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
                 startActivity(map);
@@ -94,7 +94,9 @@ public class DisplayVenueActivity extends SherlockListActivity {
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        Cursor c = (Cursor) getListAdapter().getItem(position);
+        //We do this because of the manual header we add (for the Venue details)
+        int newPosition = position - 1;
+        Cursor c = (Cursor) getListAdapter().getItem(newPosition);
         Show show = new Show(c);
 
         Intent displayShow = new Intent(this, ViewShowFragment.class);

@@ -215,16 +215,8 @@ public class DataService {
         return Show.getAll(DBHelper.getSharedService().getWritableDatabase(), "sort_name");
     }
 
-    public ArrayList<Show> getFavorites(){
-        Show s = new Show();
-        ArrayList<Show> retVal = new ArrayList<Show>();
-        Cursor c = DBHelper.getSharedService().getWritableDatabase().query(s.getTableName(), s.getColumnNames(), "favorite = 1", null, null, null, "sort_name");
-
-        while(c.moveToNext())
-        {
-            retVal.add(new Show(c));
-        }
-
+    public Cursor getFavorites(){
+        Cursor retVal = DBHelper.getSharedService().getWritableDatabase().rawQuery("SELECT p._id, s.name, v.short_name, p.start_date, p.show_id from show s LEFT JOIN performance p on s.id = p.show_id LEFT JOIN venue v on p.venue_id = v.id where favorite = 1 ORDER BY start_date", null);
         return retVal;
     }
 

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/venue_globe"
+    <item android:id="@+id/venue_map"
           android:title="globe"
-          android:icon="@drawable/ic_action_globe"
+          android:icon="@drawable/ic_action_place"
           android:showAsAction="always"
           android:visible="true"/>
-    <item android:id="@+id/venue_map"
-          android:title="map"
-          android:icon="@drawable/ic_action_map"
-          android:showAsAction="always"
-          android:visible="false"/>
 </menu>
